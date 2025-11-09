@@ -18,14 +18,236 @@
             font-family: 'faune', Arial, sans-serif;
             margin: 0;
             padding: 0,5rem;
-            background-color: #141414;
+            background-color: rgb(30, 32, 44);
+        }
+/*Header*/
+        .header {
+            display: grid;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            grid-template-columns: repeat(2, auto);
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(49, 50, 62, 0.765);
+            padding: 0 24px;
+            height: 80px;
+            gap: 1rem;
+            z-index: 1000;
+        }
+    
+        .header a {
+        color:rgb(96, 81, 155);
+        text-decoration: none;
+        text-align: right;
+        padding: 1.5rem;
+        font-size:1.5rem;
+        }
+        .header img {
+        align-self: left;
+        padding-right: 5rem;
+        }
+/*Fin de Header*/
+/*Première page accueil*/
+    .accueil-texte {
+            font-size: clamp(2rem, 8vw, 20rem);
+            line-height: 1.1;
+            color:rgb(96, 81, 155);
+        }
+    .accueil {
+            display: grid;
+            grid-template-columns: 2fr 1fr; /* Texte prend 2/3, fleur 1/3 */
+            align-items: center;
+            gap: 2rem;
+            min-height: 100vh;
+            padding: 2rem;
+            z-index: 1;
+            position: sticky;
+            top: 0;
+        }
+    .accueil-visuel {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+        }
+    .Fleurnoire {
+            width: 100%;
+            height: auto;
+            display: block;
+            opacity: 0.3;
         }
 
-        .header {
-            text-align: center;
-            margin-bottom: 2px;
-            color: #a996c7;
+    .Fleurviolette {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+            opacity: 0;
+            clip-path: inset(100% 0 0 0); /* Cache la fleur du bas vers le haut */
+            transition: clip-path 0.1s ease-out, opacity 0.3s ease-out;
         }
+    .scroll-spacer {
+            height: 150vh; /* Crée un espace d'une hauteur d'écran */
+            background-color: transparent;
+    }
+    .suite-contenu { /*Section suivante qui pousse le scroll*/
+            position: relative;
+            z-index: 2;
+            background-color: rgb(96, 81, 155);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+@media (max-width: 768px) { /*Version Mobile*/
+    .accueil {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .fleur-container {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+}
+/*Fin Première page d'accueil*/
+/*Deuxième page d'accueil*/
+.portfolio {
+    position: relative;
+    z-index: 10;
+    background: linear-gradient(135deg, #7B68B8 0%, #9B8DC7 100%);
+    padding: 4rem 0;
+    overflow: hidden;
+}
+.h2_portfolio {
+
+    margin-right: 2rem;
+    margin-bottom: 3rem;
+    color:rgb(191, 192, 209) ;
+    text-align: right;
+    font-size: clamp(2rem, 8vw, 5rem);
+}
+.portfolio-row {
+    display: flex;
+    gap: 2rem;
+    padding: 0rem 0rem 2rem 0rem;
+    width: max-content;
+}
+
+.portfolio-item {
+    width: 350px;
+    height: 250px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    flex-shrink: 0;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Animation gauche vers droite */
+.row-left-to-right {
+    animation: scrollLeft 30s linear infinite;
+    transition: animation-duration 0.5s ease;
+}
+
+@keyframes scrollLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Animation droite vers gauche */
+.row-right-to-left {
+    animation: scrollRight 30s linear infinite;
+    transition: animation-duration 0.5s ease;
+}
+
+@keyframes scrollRight {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Zoom au survol */
+.portfolio-item:hover {
+    transform: scale(1.08);
+}
+
+/* Version mobile */
+@media (max-width: 768px) {
+    .portfolio-item {
+        width: 250px;
+        height: 180px;
+    }
+    
+    .portfolio h2 {
+        text-align: center;
+    }
+}
+/*Fin deuxième page d'accueil*/
+/*Début troisième page d'accueil*/
+.cv {
+    position: relative;
+    z-index: 15;
+    background: rgb(30, 32, 44);
+    padding: 4rem 0;
+    overflow: hidden;
+}
+.h2_cv {
+    margin-right: 2rem;
+    margin-bottom: 3rem;
+    color:rgb(191, 192, 209) ;
+    text-align: left;
+    font-size: clamp(2rem, 8vw, 5rem);
+}
+.grid_presentation {
+    display: grid;
+    grid-template-columns: (2,auto);
+}
+.image_presentation {
+    grid-row: span 2;
+}
+/*Paragraphes et titres standards*/
+ p {
+            margin-top: 0;
+            margin-bottom: 0,01rem;
+            color:rgb(191, 192, 209) ;
+        }
+ .h2_portfolio {
+            margin-top: 7rem;
+            color:rgb(191, 192, 209) ;
+            text-align: right;
+            font-size: clamp(2rem, 8vw, 5rem);
+}
+ h3 {
+            margin-top: 0;
+            margin-bottom: 1rem;
+            color: #ffffff;
+            font-size:larger;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+ h4 {
+            color: #000000;
+            margin-bottom: 10px;
+        }
+/*Fin pagraphe et titres standards*/
 
         .parent-grid {
             display: grid;
@@ -197,18 +419,7 @@
         content: "Loisirs et actions bénévoles";
         }
 
-        h3 {
-            margin-top: 0;
-            margin-bottom: 1rem;
-            color: #ffffff;
-            font-size:larger;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        h4 {
-            color: #000000;
-            margin-bottom: 10px;
-        }
+       
 
         .legende {
             font-style: italic;
@@ -216,10 +427,7 @@
             margin-top: -8px;
         }
 
-        p {
-            margin-top: 0;
-            margin-bottom: 0,01rem;
-        }
+       
 .footer { 
    text-align: center;
    padding: 70px 10px 40px;
