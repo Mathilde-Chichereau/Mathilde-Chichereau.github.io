@@ -218,10 +218,22 @@
 }
 .grid_presentation {
     display: grid;
-    grid-template-columns: (2,auto);
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+    align-items: center;
+    background-color: rgb(30, 32, 44);
+    padding: 6rem 4rem;
+    min-height: 100vh;
 }
 .image_presentation {
-    grid-row: span 2;
+grid-row: 1;
+grid-column: 2;
+max-height: 100px;
+}
+.grid_presentation p {
+    grid-row: 1;
+    grid-column: 1;
 }
 /*Paragraphes et titres standards*/
  p {
