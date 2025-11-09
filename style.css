@@ -33,6 +33,7 @@ body {
   --sub-color: #8877be;
   --text-color: #bfc0d1;
 }
+
 /*Header*/
 .header {
   display: grid;
@@ -43,7 +44,7 @@ body {
   grid-template-columns: repeat(2, auto);
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(49, 50, 62, 0.765);
+  background-color: var(--main-color);
   padding: 0 24px;
   height: 80px;
   gap: 1rem;
