@@ -1,453 +1,492 @@
- @font-face {
-    font-family:'faune';
-    src: url(Fonts/Faune-Text_Regular.woff2) format('woff2');
-    font-weight: 400;
+@font-face {
+  font-family: 'faune';
+  src: url(Fonts/Faune-Text_Regular.woff2) format('woff2');
+  font-weight: 400;
 }
 
 @font-face {
-    font-family:'faune';
-    src: url(Fonts/Faune-Text_Bold.woff2) format('woff2');
-    font-weight: 700;
+  font-family: 'faune';
+  src: url(Fonts/Faune-Text_Bold.woff2) format('woff2');
+  font-weight: 700;
 }
 
 @font-face {
-    font-family: 'jost';
-    src: url(Fonts/Jost-VariableFont_wght.ttf) format('ttf');
-} 
-  body {
-            font-family: 'faune', Arial, sans-serif;
-            margin: 0;
-            padding: 0,5rem;
-            background-color: rgb(30, 32, 44);
-        }
+  font-family: 'jost';
+  src: url(Fonts/Jost-VariableFont_wght.ttf) format('ttf');
+}
+body {
+  font-family: 'faune', Arial, sans-serif;
+  margin: 0;
+  padding: 0, 5rem;
+  background-color: rgb(30, 32, 44);
+}
+
+:root {
+  --main-color: #1e202c;
+  --sub-color: #8877be;
+  --text-color: #bfc0d1;
+}
 /*Header*/
-        .header {
-            display: grid;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            grid-template-columns: repeat(2, auto);
-            justify-content: space-between;
-            align-items: center;
-            background-color: rgba(49, 50, 62, 0.765);
-            padding: 0 24px;
-            height: 80px;
-            gap: 1rem;
-            z-index: 1000;
-        }
-    
-        .header a {
-        color:rgb(96, 81, 155);
-        text-decoration: none;
-        text-align: right;
-        padding: 1.5rem;
-        font-size:1.5rem;
-        }
-        .header img {
-        align-self: left;
-        padding-right: 5rem;
-        }
+.header {
+  display: grid;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  grid-template-columns: repeat(2, auto);
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(49, 50, 62, 0.765);
+  padding: 0 24px;
+  height: 80px;
+  gap: 1rem;
+  z-index: 1000;
+}
+
+.header a {
+  color: rgb(96, 81, 155);
+  text-decoration: none;
+  text-align: right;
+  padding: 1.5rem;
+  font-size: 1.5rem;
+}
+.header img {
+  align-self: left;
+  padding-right: 5rem;
+}
+
 /*Fin de Header*/
 /*Première page accueil*/
-    .accueil-texte {
-            font-size: clamp(2rem, 8vw, 20rem);
-            line-height: 1.1;
-            color:rgb(96, 81, 155);
-        }
-    .accueil {
-            display: grid;
-            grid-template-columns: 2fr 1fr; /* Texte prend 2/3, fleur 1/3 */
-            align-items: center;
-            gap: 2rem;
-            min-height: 100vh;
-            padding: 2rem;
-            z-index: 1;
-            position: sticky;
-            top: 0;
-        }
-    .accueil-visuel {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            width: 100%;
-            max-width: 500px;
-        }
-    .Fleurnoire {
-            width: 100%;
-            height: auto;
-            display: block;
-            opacity: 0.3;
-        }
 
-    .Fleurviolette {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: auto;
-            opacity: 0;
-            clip-path: inset(100% 0 0 0); /* Cache la fleur du bas vers le haut */
-            transition: clip-path 0.1s ease-out, opacity 0.3s ease-out;
-        }
-    .scroll-spacer {
-            height: 150vh; /* Crée un espace d'une hauteur d'écran */
-            background-color: transparent;
-    }
-    .suite-contenu { /*Section suivante qui pousse le scroll*/
-            position: relative;
-            z-index: 2;
-            background-color: rgb(96, 81, 155);
-            min-height: 100vh;
-            padding: 2rem;
-        }
-@media (max-width: 768px) { /*Version Mobile*/
-    .accueil {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-    
-    .fleur-container {
-        max-width: 300px;
-        margin: 0 auto;
-    }
+.accueil-texte {
+  font-size: clamp(2rem, 8vw, 20rem);
+  line-height: 1.1;
+  color: rgb(96, 81, 155);
+}
+.accueil {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* Texte prend 2/3, fleur 1/3 */
+  align-items: center;
+  gap: 2rem;
+  min-height: 100vh;
+  padding: 2rem;
+  z-index: 1;
+  position: sticky;
+  top: 0;
+}
+.accueil-visuel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+}
+.Fleurnoire {
+  width: 100%;
+  height: auto;
+  display: block;
+  opacity: 0.3;
+}
+
+.Fleurviolette {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  clip-path: inset(100% 0 0 0); /* Cache la fleur du bas vers le haut */
+  transition: clip-path 0.1s ease-out, opacity 0.3s ease-out;
+}
+.scroll-spacer {
+  height: 150vh; /* Crée un espace d'une hauteur d'écran */
+  background-color: transparent;
+}
+.suite-contenu {
+  /*Section suivante qui pousse le scroll*/
+  position: relative;
+  z-index: 2;
+  background-color: rgb(96, 81, 155);
+  min-height: 100vh;
+  padding: 2rem;
+}
+@media (max-width: 768px) {
+  /*Version Mobile*/
+  .accueil {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .fleur-container {
+    max-width: 300px;
+    margin: 0 auto;
+  }
 }
 /*Fin Première page d'accueil*/
 /*Deuxième page d'accueil*/
 .portfolio {
-    position: relative;
-    z-index: 10;
-    background: linear-gradient(135deg, #7B68B8 0%, #9B8DC7 100%);
-    padding: 4rem 0;
-    overflow: hidden;
+  position: relative;
+  z-index: 10;
+  background: linear-gradient(135deg, #7b68b8 0%, #9b8dc7 100%);
+  padding: 4rem 0;
+  overflow: hidden;
 }
 .h2_portfolio {
-
-    margin-right: 2rem;
-    margin-bottom: 3rem;
-    color:rgb(191, 192, 209) ;
-    text-align: right;
-    font-size: clamp(2rem, 8vw, 5rem);
+  margin-right: 2rem;
+  margin-bottom: 3rem;
+  color: rgb(191, 192, 209);
+  text-align: right;
+  font-size: clamp(2rem, 8vw, 5rem);
 }
 .portfolio-row {
-    display: flex;
-    gap: 2rem;
-    padding: 0rem 0rem 2rem 0rem;
-    width: max-content;
+  display: flex;
+  gap: 2rem;
+  padding: 0rem 0rem 2rem 0rem;
+  width: max-content;
 }
 
 .portfolio-item {
-    width: 350px;
-    height: 250px;
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 20px;
-    flex-shrink: 0;
-    overflow: hidden;
-    cursor: pointer;
-    transition: transform 0.5s ease;
+  width: 350px;
+  height: 250px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  flex-shrink: 0;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.5s ease;
 }
 
 .portfolio-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* Animation gauche vers droite */
 .row-left-to-right {
-    animation: scrollLeft 30s linear infinite;
-    transition: animation-duration 0.5s ease;
+  animation: scrollLeft 30s linear infinite;
+  transition: animation-duration 0.5s ease;
 }
 
 @keyframes scrollLeft {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 /* Animation droite vers gauche */
 .row-right-to-left {
-    animation: scrollRight 30s linear infinite;
-    transition: animation-duration 0.5s ease;
+  animation: scrollRight 30s linear infinite;
+  transition: animation-duration 0.5s ease;
 }
 
 @keyframes scrollRight {
-    0% {
-        transform: translateX(-50%);
-    }
-    100% {
-        transform: translateX(0);
-    }
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 /* Zoom au survol */
 .portfolio-item:hover {
-    transform: scale(1.08);
+  transform: scale(1.08);
 }
 
 /* Version mobile */
 @media (max-width: 768px) {
-    .portfolio-item {
-        width: 250px;
-        height: 180px;
-    }
-    
-    .portfolio h2 {
-        text-align: center;
-    }
+  .portfolio-item {
+    width: 250px;
+    height: 180px;
+  }
+
+  .portfolio h2 {
+    text-align: center;
+  }
 }
 /*Fin deuxième page d'accueil*/
 /*Début troisième page d'accueil*/
 .cv {
-    position: relative;
-    z-index: 15;
-    background: rgb(30, 32, 44);
-    padding: 4rem 0;
-    overflow: hidden;
+  position: relative;
+  z-index: 1;
+  background: var(--main-color);
+  padding: 32px 0;
 }
-.h2_cv {
-    margin-right: 2rem;
-    margin-bottom: 3rem;
-    color:rgb(191, 192, 209) ;
-    text-align: left;
-    font-size: clamp(2rem, 8vw, 5rem);
-}
-.grid_presentation {
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr 2fr;
-    gap: 4rem;
-    align-items: center;
-    background-color: rgb(30, 32, 44);
-    padding: 6rem 4rem;
-    min-height: 100vh;
-}
-.image_presentation {
-grid-row: 1;
-grid-column: 2;
-max-height: 100px;
-}
-.grid_presentation p {
-    grid-row: 1;
-    grid-column: 1;
-}
-/*Paragraphes et titres standards*/
- p {
-            margin-top: 0;
-            margin-bottom: 0,01rem;
-            color:rgb(191, 192, 209) ;
-        }
- .h2_portfolio {
-            margin-top: 7rem;
-            color:rgb(191, 192, 209) ;
-            text-align: right;
-            font-size: clamp(2rem, 8vw, 5rem);
-}
- h3 {
-            margin-top: 0;
-            margin-bottom: 1rem;
-            color: #ffffff;
-            font-size:larger;
-            font-family: Arial, Helvetica, sans-serif;
-        }
 
- h4 {
-            color: #000000;
-            margin-bottom: 10px;
-        }
+.grid_presentation {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: start;
+  background-color: rgb(30, 32, 44);
+  padding: 64px;
+  max-height: 100vh;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+}
+
+.left h2 {
+  color: rgb(191, 192, 209);
+  
+  font-size: 3rem;
+}
+
+.left p {
+  margin: 16px 0;
+  color: rgb(191, 192, 209);
+  line-height: 1.5;
+  max-width: 600px;
+}
+
+.left a {
+  color: rgb(96, 81, 155);
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin-top: 64px;
+}
+
+.right {
+  grid-row: 1;
+  grid-column: 2;
+  
+  height: 700px;
+}
+
+.right .img {
+  width: 100%;
+  height: 100%;
+  
+  border-radius: 16px;
+  
+  content: '';
+  position: relative;
+  background: url('./Img/projet_001.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*Paragraphes et titres standards*/
+p {
+  margin-top: 0;
+  margin-bottom: 0, 01rem;
+  color: rgb(191, 192, 209);
+}
+.h2_portfolio {
+  margin-top: 7rem;
+  color: rgb(191, 192, 209);
+  text-align: right;
+  font-size: clamp(2rem, 8vw, 5rem);
+}
+h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  font-size: larger;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h4 {
+  color: #000000;
+  margin-bottom: 10px;
+}
 /*Fin pagraphe et titres standards*/
 
-        .parent-grid {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .presentation {
-            background: rgba(200, 152, 238, 0.578);
-            padding: 20px;
-            border-radius: 8px;
-        }
-
-        .child-grid {
-            display: grid;
-            grid-template-columns: auto 1fr;
-            gap: 10px;
-            margin: 15px 0;
-        }
-
-        .categorie {
-            grid-column: 1;
-            font-weight: bold;
-            margin: 0;
-        }
-
-        .info {
-            grid-column: 2;
-            margin: 0;
-        }
-
-        .long-text {
-            margin: 15px 0;
-        }
-
-        /* Styles du carrousel */
-        .carousel-container {
-            background: rgba(200, 152, 238, 0.578);
-            padding: 20px;
-            border-radius: 8px;
-            position: relative;
-        }
-
-        .carousel-wrapper {
-            overflow: hidden;
-            position: relative;
-        }
-
-        .carousel-slides {
-            display: flex;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .carousel-slide {
-            min-width: 100%;
-            box-sizing: border-box;
-        }
-
-        /* Cacher les inputs radio */
-        input[type="radio"][name="carousel"] {
-            display: none;
-        }
-
-        /* Navigation du carrousel */
-        .carousel-nav {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 15px;
-        }
-
-        .carousel-nav label {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background-color: #ddd;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .carousel-nav label:hover {
-            background-color: #999;
-        }
-
-        /* Déplacement des slides selon le radio sélectionné */
-        #slide1:checked ~ .carousel-wrapper .carousel-slides {
-            transform: translateX(0%);
-        }
-
-        #slide2:checked ~ .carousel-wrapper .carousel-slides {
-            transform: translateX(-100%);
-        }
-
-        #slide3:checked ~ .carousel-wrapper .carousel-slides {
-            transform: translateX(-200%);
-        }
-
-        /* Coloration des indicateurs */
-        #slide1:checked ~ .carousel-nav label[for="slide1"],
-        #slide2:checked ~ .carousel-nav label[for="slide2"],
-        #slide3:checked ~ .carousel-nav label[for="slide3"] {
-            background-color: #333;
-        }
-
-        /* Boutons de navigation flèche */
-        .carousel-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: start;
-            margin-bottom: 15px;
-        }
-
-        .carousel-header h3 {
-            margin: 0;
-        }
-
-        .carousel-arrows {
-            display: flex;
-            gap: 10px;
-        }
-
-        .carousel-arrows label {
-            width: 40px;
-            height: 40px;
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            font-size: 18px;
-            transition: color 0.3s;
-            user-select: none;
-        }
-
-        .carousel-arrows label:hover {
-            color: #555;
-        }
-
-        .carousel-arrows label:active {
-            color: #000;
-        }
-
-        /* Cacher les flèches par défaut */
-        .carousel-arrows label {
-            display: none;
-        }
-
-        /* Afficher les bonnes flèches selon la slide active */
-        #slide1:checked ~ .carousel-header .prev-slide3,
-        #slide1:checked ~ .carousel-header .next-slide2,
-        #slide2:checked ~ .carousel-header .prev-slide1,
-        #slide2:checked ~ .carousel-header .next-slide3,
-        #slide3:checked ~ .carousel-header .prev-slide2,
-        #slide3:checked ~ .carousel-header .next-slide1 {
-            display: flex;
-        }
-
-        /* Changer le titre selon la slide active */
-         #carousel-title::before {
-        content: "Scolarité";
-        }
-        #slide2:checked ~ .carousel-header #carousel-title::before {
-        content: "Expériences professionnelles";
-        }
-        #slide3:checked ~ .carousel-header #carousel-title::before {
-        content: "Loisirs et actions bénévoles";
-        }
-
-       
-
-        .legende {
-            font-style: italic;
-            color: #000000a5;
-            margin-top: -8px;
-        }
-
-       
-.footer { 
-   text-align: center;
-   padding: 70px 10px 40px;
-   font-size: 0,5rem;
+.parent-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.credits { 
-    color:#232323 ;
-    padding: 0;
-    margin: 0;
+.presentation {
+  background: rgba(200, 152, 238, 0.578);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.child-grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.categorie {
+  grid-column: 1;
+  font-weight: bold;
+  margin: 0;
+}
+
+.info {
+  grid-column: 2;
+  margin: 0;
+}
+
+.long-text {
+  margin: 15px 0;
+}
+
+/* Styles du carrousel */
+.carousel-container {
+  background: rgba(200, 152, 238, 0.578);
+  padding: 20px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.carousel-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-slides {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Cacher les inputs radio */
+input[type='radio'][name='carousel'] {
+  display: none;
+}
+
+/* Navigation du carrousel */
+.carousel-nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.carousel-nav label {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ddd;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.carousel-nav label:hover {
+  background-color: #999;
+}
+
+/* Déplacement des slides selon le radio sélectionné */
+#slide1:checked ~ .carousel-wrapper .carousel-slides {
+  transform: translateX(0%);
+}
+
+#slide2:checked ~ .carousel-wrapper .carousel-slides {
+  transform: translateX(-100%);
+}
+
+#slide3:checked ~ .carousel-wrapper .carousel-slides {
+  transform: translateX(-200%);
+}
+
+/* Coloration des indicateurs */
+#slide1:checked ~ .carousel-nav label[for='slide1'],
+#slide2:checked ~ .carousel-nav label[for='slide2'],
+#slide3:checked ~ .carousel-nav label[for='slide3'] {
+  background-color: #333;
+}
+
+/* Boutons de navigation flèche */
+.carousel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 15px;
+}
+
+.carousel-header h3 {
+  margin: 0;
+}
+
+.carousel-arrows {
+  display: flex;
+  gap: 10px;
+}
+
+.carousel-arrows label {
+  width: 40px;
+  height: 40px;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 18px;
+  transition: color 0.3s;
+  user-select: none;
+}
+
+.carousel-arrows label:hover {
+  color: #555;
+}
+
+.carousel-arrows label:active {
+  color: #000;
+}
+
+/* Cacher les flèches par défaut */
+.carousel-arrows label {
+  display: none;
+}
+
+/* Afficher les bonnes flèches selon la slide active */
+#slide1:checked ~ .carousel-header .prev-slide3,
+#slide1:checked ~ .carousel-header .next-slide2,
+#slide2:checked ~ .carousel-header .prev-slide1,
+#slide2:checked ~ .carousel-header .next-slide3,
+#slide3:checked ~ .carousel-header .prev-slide2,
+#slide3:checked ~ .carousel-header .next-slide1 {
+  display: flex;
+}
+
+/* Changer le titre selon la slide active */
+#carousel-title::before {
+  content: 'Scolarité';
+}
+#slide2:checked ~ .carousel-header #carousel-title::before {
+  content: 'Expériences professionnelles';
+}
+#slide3:checked ~ .carousel-header #carousel-title::before {
+  content: 'Loisirs et actions bénévoles';
+}
+
+.legende {
+  font-style: italic;
+  color: #000000a5;
+  margin-top: -8px;
+}
+
+.footer {
+  text-align: center;
+  padding: 70px 10px 40px;
+  font-size: 5rem;
+}
+
+.credits {
+  color: #232323;
+  padding: 0;
+  margin: 0;
 }
