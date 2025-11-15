@@ -145,7 +145,6 @@ body {
     opacity: 1;
   }
 }
-
 /*Fin de Header*/
 /*Première page accueil*/
 
@@ -599,8 +598,7 @@ input[type='radio'][name='carousel'] {
   font-size: 5rem;
 }
 
-.credits {
-  color: #232323;
+.credits p {
   padding: 0;
-  margin: 0;
+  margin: 100px;
 }
