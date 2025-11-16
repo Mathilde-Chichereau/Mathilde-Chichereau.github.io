@@ -20,7 +20,7 @@ body {
   font-family: 'faune', Arial, sans-serif;
   margin: 0;
   padding: 0, 5rem;
-  background-color: rgb(30, 32, 44);
+  background-color: light-dark(var(--main-color-light) , var(--main-color));
 }
 
 * {
@@ -31,9 +31,15 @@ body {
 }
 
 :root {
+  color-scheme: light dark;
   --main-color: #1e202c;
   --sub-color: #8877be;
+  --title-color:#60519b;
   --text-color: #bfc0d1;
+  --main-color-light:#C5C9E5;
+  --sub-color-light: #EAEDFF;
+  --title-color-light:#7970A6;
+  --text-color-light: #383A66;
 }
 
 /*Header*/
@@ -46,7 +52,7 @@ body {
   grid-template-columns: repeat(2, auto);
   justify-content: space-between;
   align-items: center;
-  background-color: var(--main-color);
+  background-color: light-dark(var(--main-color-light) , var(--main-color));
   padding: 0 24px;
   height: 80px;
   gap: 1rem;
@@ -54,7 +60,7 @@ body {
 }
 
 .header a {
-  color: rgb(96, 81, 155);
+  color:light-dark(var(--title-color-light) , var(--title-color));
   text-decoration: none;
   text-align: right;
   padding: 1.5rem;
@@ -81,7 +87,7 @@ body {
 
 .menu-icon .material-symbols-outlined {
   font-size: 40px;
-  color: rgb(96, 81, 155);
+  color: light-dark(var(--title-color-light) , var(--title-color));
   position: absolute;
   top: 0;
   left: 0;
@@ -112,7 +118,7 @@ body {
     right: -100%;
     width: 250px;
     height: calc(100vh - 80px);
-    background-color: var(--main-color);
+    background-color: light-dark(var(--main-color-light) , var(--main-color));
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -130,7 +136,8 @@ body {
     width: 100%;
     text-align: left;
     padding: 15px 10px;
-    border-bottom: 1px solid rgba(96, 81, 155, 0.2);
+    border-bottom: 1px solid ;
+    color: light-dark(var(--text-color-light) , var(--text-color)) ;
   }
    .menu-icon {
     display: block;
@@ -151,7 +158,7 @@ body {
 .accueil-texte {
   font-size: clamp(2rem, 8vw, 20rem);
   line-height: 1.1;
-  color: rgb(96, 81, 155);
+  color: light-dark(var(--title-color-light) , var(--title-color));
 }
 .accueil {
   display: grid;
@@ -197,7 +204,7 @@ body {
   /*Section suivante qui pousse le scroll*/
   position: relative;
   z-index: 2;
-  background-color: rgb(96, 81, 155);
+  background-color: light-dark(var(--sub-color-light) , var(--sub-color));
   min-height: 100vh;
   padding: 2rem;
 }
@@ -219,14 +226,14 @@ body {
 .portfolio {
   position: relative;
   z-index: 10;
-  background: linear-gradient(135deg, #7b68b8 0%, #9b8dc7 100%);
+  background: light-dark(var(--sub-color-light) , var(--sub-color));
   padding: 4rem 0;
   overflow: hidden;
 }
 .h2_portfolio {
   margin-right: 2rem;
   margin-bottom: 3rem;
-  color: rgb(191, 192, 209);
+  color: light-dark(var(--text-color-light), var(--text-color));
   text-align: right;
   font-size: clamp(2rem, 8vw, 5rem);
 }
@@ -305,7 +312,7 @@ body {
 .cv {
   position: relative;
   z-index: 1;
-  background: var(--main-color);
+  background: light-dark(var(--main-color-light) , var(--main-color));
   padding: 32px 0;
 }
 
@@ -315,7 +322,6 @@ body {
   grid-template-columns: 1fr 1fr;
   gap: 32px;
   align-items: start;
-  background-color: rgb(30, 32, 44);
   padding: 125px 64px 64px 64px;
   max-height: 100vh;
 }
@@ -328,7 +334,7 @@ body {
 }
 
 .left h2 {
-  color: rgb(191, 192, 209);
+  color: light-dark(var(--text-color-light) , var(--text-color));
   font-size: clamp(2rem, 8vw, 5rem);
   margin: 0 ;
   margin-bottom: 32px;
@@ -336,7 +342,7 @@ body {
 
 .left p {
   margin: 16px 0;
-  color: rgb(191, 192, 209);
+  color: light-dark(var(--text-color-light) , var(--text-color));
   line-height: 1.5;
   max-width: 500px;
   justify-content: space-around;
@@ -352,7 +358,7 @@ body {
     margin-top: 30px;
 }
 .left a {
-  color: rgb(96, 81, 155);
+  color: light-dark(var(--title-color-light) , var(--title-color));
   font-size: 1.2rem;
   display : flex ;
   align-items: end ;
@@ -361,8 +367,8 @@ body {
 }
 
 .left a span {
-   color: rgb(96, 81, 155);
-   font-size: 16px;
+    color: light-dark(var(--title-color-light) , var(--title-color));
+    font-size: 16px;
     display: flex;
     align-items: center;
     justify-content: end;
@@ -372,7 +378,6 @@ body {
 .right {
   grid-row: 1;
   grid-column: 2;
-  
   height: 650px;
 }
 
@@ -381,8 +386,6 @@ body {
   height: 100%;
   align-items: bottom;
   border-radius: 16px;
-  
-  content: '';
   position: relative;
   background: url('./Img/projet_001.jpg');
   background-position: center;
@@ -394,24 +397,23 @@ body {
 p {
   margin-top: 0;
   margin-bottom: 0, 01rem;
-  color: rgb(191, 192, 209);
+  color: light-dark(var(--text-color-light) , var(--text-color));
 }
 .h2_portfolio {
   margin-top: 7rem;
-  color: rgb(191, 192, 209);
+  color: light-dark(var(--text-color-light) , var(--text-color));
   text-align: right;
   font-size: clamp(2rem, 8vw, 5rem);
 }
 h3 {
   margin-top: 0;
   margin-bottom: 1rem;
-  color: #ffffff;
+  color:light-dark(var(--text-color-light) , var(--text-color));
   font-size: larger;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 h4 {
-  color: #000000;
+  color: light-dark(var(--main-color-light) , var(--main-color));
   margin-bottom: 10px;
 }
 /*Fin pagraphe et titres standards*/
@@ -425,7 +427,7 @@ h4 {
 }
 
 .presentation {
-  background: rgba(200, 152, 238, 0.578);
+  background: light-dark(var(--sub-color-light) , var(--sub-color));
   padding: 20px;
   border-radius: 8px;
 }
@@ -454,7 +456,7 @@ h4 {
 
 /* Styles du carrousel */
 .carousel-container {
-  background: rgba(200, 152, 238, 0.578);
+  background: light-dark(var(--sub-color-light) , var(--sub-color));
   padding: 20px;
   border-radius: 8px;
   position: relative;
@@ -492,7 +494,6 @@ input[type='radio'][name='carousel'] {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background-color: #ddd;
   cursor: pointer;
   transition: background-color 0.3s;
 }
@@ -541,7 +542,7 @@ input[type='radio'][name='carousel'] {
 .carousel-arrows label {
   width: 40px;
   height: 40px;
-  color: white;
+  color: light-dark(var(--text-color-light) , var(--text-color));
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -553,7 +554,7 @@ input[type='radio'][name='carousel'] {
 }
 
 .carousel-arrows label:hover {
-  color: #555;
+  color:light-dark(var(--main-color-light) , var(--main-color));
 }
 
 .carousel-arrows label:active {
