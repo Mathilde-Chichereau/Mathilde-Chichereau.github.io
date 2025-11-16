@@ -219,6 +219,16 @@ body {
   min-height: 100vh;
   padding: 2rem;
 }
+
+@media (prefers-color-scheme: light) {
+  .Fleurnoire {
+    content: url(Img/Fleurnoire_Light.svg);
+  }
+  .Fleurviolette {
+    content: url(Img/Fleurviolette_Light.svg);
+  }
+}
+
 @media (max-width: 768px) {
   /*Version Mobile*/
   .accueil {
@@ -598,17 +608,6 @@ input[type='radio'][name='carousel'] {
   content: 'Loisirs et actions bénévoles';
 }
 /*FIN DU CV*/
-.legende {
-  font-style: italic;
-  color: #000000a5;
-  margin-top: -8px;
-}
-
-.footer {
-  text-align: center;
-  padding: 70px 10px 40px;
-  font-size: 5rem;
-}
 
 .credits p {
   padding: 0;

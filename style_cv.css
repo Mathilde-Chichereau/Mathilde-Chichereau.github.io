@@ -20,7 +20,7 @@ body {
   font-family: 'faune', Arial, sans-serif;
   margin: 0;
   padding: 0, 5rem;
-  background-color: var(--main-color);
+  background-color: light-dark(var(--main-color-light) , var(--main-color));
 }
 
 * {
@@ -31,10 +31,15 @@ body {
 }
 
 :root {
+  color-scheme: light dark;
   --main-color: #1e202c;
   --sub-color: #8877be;
   --title-color:#60519b;
   --text-color: #bfc0d1;
+  --main-color-light:#C5C9E5;
+  --sub-color-light: #EAEDFF;
+  --title-color-light:#7970A6;
+  --text-color-light: #383A66;
 }
 
 /*Header*/
@@ -47,7 +52,7 @@ body {
   grid-template-columns: repeat(2, auto);
   justify-content: space-between;
   align-items: center;
-  background-color: var(--main-color);
+  background-color: light-dark(var(--main-color-light) , var(--main-color));
   padding: 0 24px;
   height: 80px;
   gap: 1rem;
@@ -55,12 +60,17 @@ body {
 }
 
 .header a {
-  color: var(--title-color);
+  color:light-dark(var(--title-color-light) , var(--title-color));
   text-decoration: none;
   text-align: right;
   padding: 1.5rem;
   font-size: 1.5rem;
 }
+
+.header a:hover {
+  color: light-dark(var(--text-color-light), var(--text-color));
+}
+
 .header img {
   align-self: left;
   padding-right: 5rem;
@@ -82,7 +92,7 @@ body {
 
 .menu-icon .material-symbols-outlined {
   font-size: 40px;
-  color: var(--title-color);
+  color: light-dark(var(--title-color-light) , var(--title-color));
   position: absolute;
   top: 0;
   left: 0;
@@ -113,7 +123,7 @@ body {
     right: -100%;
     width: 250px;
     height: calc(100vh - 80px);
-    background-color: var(--main-color);
+    background-color: light-dark(var(--main-color-light) , var(--main-color));
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -132,8 +142,14 @@ body {
     text-align: left;
     padding: 15px 10px;
     border-bottom: 1px solid ;
-    color: var(--text-color)
+    color: light-dark(var(--text-color-light) , var(--text-color)) ;
   }
+
+  .header a:hover,
+  .header a:active {
+    color: light-dark(var(--title-color-light), var(--title-color));
+  }
+  
    .menu-icon {
     display: block;
   }
@@ -152,23 +168,23 @@ body {
 p {
   margin-top: 0;
   margin-bottom: 0, 01rem;
-  color: var(--text-color);
+  color: light-dark(var(--text-color-light) , var(--text-color));
 }
 .h2_portfolio {
   margin-top: 7rem;
-  color: var(--text-color);
+  color: light-dark(var(--text-color-light) , var(--text-color));
   text-align: right;
   font-size: clamp(2rem, 8vw, 5rem);
 }
 h3 {
   margin-top: 0;
   margin-bottom: 1rem;
-  color:var(--text-color);
+  color:light-dark(var(--text-color-light) , var(--text-color));
   font-size: larger;
 }
 
 h4 {
-  color: var(--main-color);
+  color: light-dark(var(--main-color-light) , var(--main-color));
   margin-bottom: 10px;
 }
 /*Fin pagraphe et titres standards*/
@@ -182,7 +198,7 @@ h4 {
 }
 
 .presentation {
-  background: var(--sub-color);
+  background: light-dark(var(--sub-color-light) , var(--sub-color));
   padding: 20px;
   border-radius: 8px;
 }
@@ -211,7 +227,7 @@ h4 {
 
 /* Styles du carrousel */
 .carousel-container {
-  background: var(--sub-color);
+  background: light-dark(var(--sub-color-light) , var(--sub-color));
   padding: 20px;
   border-radius: 8px;
   position: relative;
@@ -297,7 +313,7 @@ input[type='radio'][name='carousel'] {
 .carousel-arrows label {
   width: 40px;
   height: 40px;
-  color: var(--text-color);
+  color: light-dark(var(--text-color-light) , var(--text-color));
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -309,7 +325,7 @@ input[type='radio'][name='carousel'] {
 }
 
 .carousel-arrows label:hover {
-  color:var(--main-color);
+  color:light-dark(var(--main-color-light) , var(--main-color));
 }
 
 .carousel-arrows label:active {

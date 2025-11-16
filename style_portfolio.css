@@ -1,0 +1,208 @@
+@font-face {
+  font-family: 'faune';
+  src: url(Fonts/Faune-Text_Regular.woff2) format('woff2');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'faune';
+  src: url(Fonts/Faune-Text_Bold.woff2) format('woff2');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'jost';
+  src: url(Fonts/Jost-VariableFont_wght.ttf) format('ttf');
+}
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+
+body {
+  font-family: 'faune', Arial, sans-serif;
+  margin: 0;
+  padding: 0, 5rem;
+  background-color: light-dark(var(--main-color-light) , var(--main-color));
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+:root {
+  color-scheme: light dark;
+  --main-color: #1e202c;
+  --sub-color: #8877be;
+  --title-color:#60519b;
+  --text-color: #bfc0d1;
+  --main-color-light:#C5C9E5;
+  --sub-color-light: #EAEDFF;
+  --title-color-light:#7970A6;
+  --text-color-light: #383A66;
+}
+
+/*Header*/
+.header {
+  display: grid;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  grid-template-columns: repeat(2, auto);
+  justify-content: space-between;
+  align-items: center;
+  background-color: light-dark(var(--main-color-light) , var(--main-color));
+  padding: 0 24px;
+  height: 80px;
+  gap: 1rem;
+  z-index: 1000;
+}
+.header a {
+  color:light-dark(var(--title-color-light) , var(--title-color));
+  text-decoration: none;
+  text-align: right;
+  padding: 1.5rem;
+  font-size: 1.5rem;
+}
+.header a:hover {
+  color: light-dark(var(--text-color-light), var(--text-color));
+}
+.header img {
+  align-self: left;
+  padding-right: 5rem;
+}
+.menu-checkbox {
+  display: none;
+}
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+.menu-icon .material-symbols-outlined {
+  font-size: 40px;
+  color: light-dark(var(--title-color-light) , var(--title-color));
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.3s ease;
+}
+.icon-close {
+  opacity: 0;
+}
+@media (max-width: 768px) {
+  /* Afficher le bouton hamburger */
+  .menu-icon {
+    display: flex;
+  }
+  
+  /* Logo plus petit */
+  .header img {
+    width: 50px;
+    height: 50px;
+    padding-right: 0;
+  }
+  
+ /* Menu caché par défaut */
+    .nav-menu {
+        position: fixed;
+        top: 80px;
+        right: -100%;
+        width: 250px;
+        height: calc(100vh - 80px);
+        background-color: light-dark(var(--main-color-light) ,  var(--main-color));
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+        transition: right 0.3s ease;
+        box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+        }
+  
+        .menu-checkbox:checked ~ .nav-menu {
+        right: 0;
+        }
+  
+        .header a {
+        width: 100%;
+        text-align: left;
+        padding: 15px 10px;
+        border-bottom: 1px solid ;
+        color: light-dark(var(--text-color-light) , var (--text-color)) ;
+     }
+
+        .header a:hover,
+        .header a:active {
+          color: light-dark(var(--title-color-light), var(--title-color));
+        }
+  
+        .menu-icon {
+         display: block;
+        }
+        .menu-checkbox:checked ~ .menu-icon .icon-hamburger {
+        opacity: 0;
+        }
+  
+        .menu-checkbox:checked ~ .menu-icon .icon-close {
+        opacity: 1;
+        }
+}
+/*Fin de Header*/
+
+.portfolio-presentation {
+    margin-top: 500px;
+}
+/*Début grille brouillon*/
+        *{
+            margin: 0;
+        }
+        .item {
+            display: grid;
+            place-items: center;
+            background: light-dark(var(--main-color-light) , var(--main-color));
+            font-size: 2rem;
+            text-decoration: none;
+        }
+        .item p,
+        .item img{
+            grid-column: 1/-1;
+            grid-row: 1/-1;
+            transition: opacity 1s;
+        }
+        .item p {
+            opacity: 0;
+        }
+        .item:hover p{
+            opacity: 1;
+            z-index: 10;
+        }
+        .item:hover img{
+            opacity: 0.2;
+            filter: grayscale(1.s);
+        }
+        .grid-drawing {
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+            gap: 5px;
+            margin: 5px;
+        }
+        img {
+            max-width: 100%;
+        }
+
+        @media (min-width: 768px) {
+            .grid-drawing{
+                grid-template-columns: repeat(3,1fr);
+                margin: 10px;
+            }
+        }
+          @media (min-width: 1280px) {
+            .grid-drawing{
+                grid-template-columns: repeat(3,1fr);
+                justify-content: center;
+            }
+        }
+/*Fin grille brouillon*/
