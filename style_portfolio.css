@@ -143,7 +143,9 @@ body {
     border-bottom: 1px solid;
     color: light-dark(var(--text-color-light), var (--text-color));
   }
-
+  .header .home {
+    border-bottom: none;
+  }
   .header a:hover,
   .header a:active {
     color: light-dark(var(--title-color-light), var(--title-color));
@@ -313,6 +315,13 @@ body {
   .grid-medium {
     grid-template-columns: repeat(1, 1fr);
     margin: 5px 10px;
+  }
+  .project-medium {
+    pointer-events: none; /* Désactive le clic sur tout le conteneur */
+  }
+  .project-medium p.more {
+    pointer-events: auto; /* Réactive le clic uniquement sur "Voir plus" */
+    cursor: pointer; 
   }
 }
 

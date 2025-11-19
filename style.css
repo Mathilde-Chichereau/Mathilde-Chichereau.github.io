@@ -63,6 +63,7 @@ body {
   color:light-dark(var(--title-color-light) , var(--title-color));
   text-decoration: none;
   text-align: right;
+  border-bottom: none;
   padding: 1.5rem;
   font-size: 1.5rem;
 }
@@ -144,7 +145,9 @@ body {
     border-bottom: 1px solid ;
     color: light-dark(var(--text-color-light) , var(--text-color)) ;
   }
-
+  .header .home {
+    border-bottom: none;
+  }
   .header a:hover,
   .header a:active {
     color: light-dark(var(--title-color-light), var(--title-color));
@@ -415,6 +418,12 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   object-fit: cover;
+}
+
+@media (max-width: 767px) {
+  .right .img {
+    max-height: 1000px;
+  }
 }
 /*Fin troisième page d'accueil*/
 /*Paragraphes et titres standards*/
