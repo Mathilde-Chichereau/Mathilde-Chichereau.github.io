@@ -324,12 +324,24 @@ body {
     pointer-events: auto; /* Réactive le clic uniquement sur "Voir plus" */
     cursor: pointer; 
   }
+  .project-medium p.description {
+    margin: 5px 20px;
+  }
+  .project-medium h3 {
+    margin: 0 20px;
+  }
 }
 
 @media (min-width: 780px) {
   .grid-medium {
     grid-template-columns: repeat(2, 1fr);
     margin: 10px;
+  }
+  .project-medium p.description {
+    margin: 5px 20px;
+  }
+  .project-medium h3 {
+    margin: 0 20px;
   }
 }
 
