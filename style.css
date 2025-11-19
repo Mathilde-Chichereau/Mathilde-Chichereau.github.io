@@ -104,7 +104,7 @@ body {
   opacity: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   /* Afficher le bouton hamburger */
   .menu-icon {
     display: flex;
@@ -147,6 +147,7 @@ body {
   }
   .header .home {
     border-bottom: none;
+    text-decoration: none;
   }
   .header a:hover,
   .header a:active {
