@@ -621,7 +621,69 @@ input[type='radio'][name='carousel'] {
   content: 'Loisirs et actions bénévoles';
 }
 /*FIN DU CV*/
+/*DEBUT PAGE PORTFOLIO*/
+.grid-explications {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+    margin: 200px 100px;
+}
 
+.grid-explications .left {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.grid-explications .left h1{
+  color: light-dark(var(--title-color-light), var(--title-color));
+  margin-bottom: 1rem;
+}
+
+.grid-explications .left .explications {
+    grid-column: 1;
+    align-items: center;
+    justify-items: center;
+}
+
+.grid-explications img {
+    grid-column: 2;
+    width: 100%;
+    height: 300px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+/* Grid pour les images */
+.grid-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+    gap: 1rem;
+    margin: 50px 100px;
+}
+
+/* Disposition des images selon votre maquette */
+
+.grid-images img.large {
+    grid-row: span 2 !important; /* S'étend sur 2 rangées */
+}
+
+.grid-images img.long {
+    grid-column: span 2; /* S'étend sur 2 colonnes */
+}
+
+.grid-images img.big {
+    grid-column: span 2; /* S'étend sur 2 colonnes */
+    grid-row: span 2; /* S'étend sur 2 rangées */
+}
+.grid-images img {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+}
+/*FIN PAGE PORTFOLIO*/
 .credits p {
   padding: 0;
   margin: 100px;
