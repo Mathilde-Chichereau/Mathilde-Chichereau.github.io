@@ -55,7 +55,7 @@ body {
   align-items: center;
   background-color: light-dark(var(--main-color-light), var(--main-color));
   padding: 0 24px;
-  height: 80px;
+  height: fit-content;
   gap: 1rem;
   z-index: 1000;
 }
@@ -66,6 +66,7 @@ body {
   text-align: right;
   padding: 1.5rem;
   font-size: 1.5rem;
+  box-sizing: border-box;
 }
 
 .header a:hover {
@@ -74,6 +75,7 @@ body {
 
 .header img {
   align-self: left;
+  align-items: center;
   padding-right: 5rem;
 }
 
