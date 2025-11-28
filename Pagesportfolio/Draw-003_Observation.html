@@ -22,23 +22,44 @@
         <nav class="nav-menu"><a href="../index.html">Accueil</a>
         <a href="../portfolio.html">Portfolio</a>
         <a href="../cv.html">A propos</a>
-        <a href="../credits.html">Crédits</a></div>
+        <a href="../credits.html">Crédits</a></div></nav>
     </header>
     <div class="grid-explications">
     <div class="left"><h1>Dessin d'observation</h1>
-    <p class="explications">Durant ma classe préparatoire et première année à l'ESAD j'ai eu l'occasion de découvrir la pratique du dessin d'après modèle, dans des pauses variant de 5 à 10min.</p></div>
+    <p class="explications">Depuis ma seconde je cherche et découvre plusieurs techniques de dessin, grâce à des cours ou bien en autonomie. Je cherche à développer un regard sur le monde qui m'entoure et à le représenter à l'aide de différents médiums</p></div>
     <img src="../Img/Portfolio_img/Dessinobservation_002.webp">
     </div>
-    <div class="grid-images">
-    <img src="../Img/Portfolio_img/Dessinobservation_001.webp" class="vertical">   
-    <img src="../Img/Portfolio_img/Dessinobservation_004.webp" class="square">
-    <img src="../Img/Portfolio_img/Dessinobservation_003.webp"class="vertical">
-    <img src="../Img/Portfolio_img/Dessinobservation_005.webp"class="square">
-    <img src="../Img/Portfolio_img/Dessinobservation_006.webp" class="square">
-    <img src="../Img/Portfolio_img/Dessinobservation_007.webp"class="square">
-    <img src="../Img/Portfolio_img/Dessinobservation_008.webp"class="horizontal">
-    <img src="../Img/Portfolio_img/Dessinobservation_002.webp"class="horizontal">
-    </div>
+    <div class="grid-images" id="galleryGrid">
+    <img src="../Img/Portfolio_img/Dessinobservation_001.webp" data-index="0" class="vertical">   
+    <img src="../Img/Portfolio_img/Dessinobservation_004.webp" data-index="1" class="square">
+    <img src="../Img/Portfolio_img/Dessinobservation_003.webp" data-index="2" class="vertical">
+    <img src="../Img/Portfolio_img/Dessinobservation_005.webp" data-index="3" class="square">
+    <img src="../Img/Portfolio_img/Dessinobservation_006.webp" data-index="4" class="square">
+    <img src="../Img/Portfolio_img/Dessinobservation_007.webp" data-index="5" class="square">
+    <img src="../Img/Portfolio_img/Dessinobservation_008.webp" data-index="6" class="horizontal">
+    <img src="../Img/Portfolio_img/Dessinobservation_002.webp" data-index="7" class="horizontal">
+    <img src="../Img/Portfolio_img/Dessinobservation_009.webp" data-index="8" class="vertical">
+    <img src="../Img/Portfolio_img/Dessinobservation_010.webp" data-index="9" class="square">
+    <img src="../Img/Portfolio_img/Dessinobservation_011.webp" data-index="10" class="square">
+    <img src="../Img/Portfolio_img/Dessinobservation_012.webp" data-index="11" class="square">
+    <img src="../Img/Portfolio_img/Dessinobservation_014.webp" data-index="12" class="vertical">
+    <img src="../Img/Portfolio_img/Dessinobservation_015.webp" data-index="13" class="vertical">
+    <img src="../Img/Portfolio_img/Dessinobservation_016.webp" data-index="14" class="vertical">
+    <img src="../Img/Portfolio_img/Dessinobservation_020.webp" data-index="18" class="square">
+    <img src="../Img/Portfolio_img/Dessinobservation_017.webp" data-index="15" class="square">
+    <img src="../Img/Portfolio_img/Dessinobservation_019.webp" data-index="16" class="horizontal">
+    <img src="../Img/Portfolio_img/Dessinobservation_018.webp" data-index="17" class="square">
+    <img src="../Img/Portfolio_img/Dessinobservation_021.webp" data-index="19" class="vertical">
+    <img src="../Img/Portfolio_img/Dessinobservation_022.webp" data-index="20" class="horizontal">
+    <img src="../Img/Portfolio_img/Dessinobservation_013.webp" data-index="21" class="horizontal">
+</div>
+    <div class="gallery-modal" id="galleryModal">
+        <div class="gallery-modal-content">
+            <button class="modal-close" onclick="closeGalleryModal()">&times;</button>
+            <button class="modal-nav modal-prev" onclick="prevGalleryImage()">❮</button>
+            <img id="modalGalleryImage" src="" alt="">
+            <button class="modal-nav modal-next" onclick="nextGalleryImage()">❯</button>
+        </div>
  <script src="../script.js"></script>
 </body>
 </html>

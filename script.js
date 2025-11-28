@@ -195,3 +195,60 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 });
+
+
+//GALLERIE D'IMAGES//
+ let currentGalleryIndex = 0;
+        const galleryImages = [];
+
+        // Initialiser les images de la galerie
+        function initGallery() {
+            const gallery = document.getElementById('galleryGrid');
+            const imgs = gallery.querySelectorAll('img[data-index]');
+            
+            imgs.forEach((img, index) => {
+                galleryImages[index] = img.src;
+                img.addEventListener('click', () => openGalleryModal(index));
+            });
+        }
+
+        function openGalleryModal(index) {
+            currentGalleryIndex = index;
+            document.getElementById('modalGalleryImage').src = galleryImages[index];
+            document.getElementById('galleryModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeGalleryModal() {
+            document.getElementById('galleryModal').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        function nextGalleryImage() {
+            currentGalleryIndex = (currentGalleryIndex + 1) % galleryImages.length;
+            document.getElementById('modalGalleryImage').src = galleryImages[currentGalleryIndex];
+        }
+
+        function prevGalleryImage() {
+            currentGalleryIndex = (currentGalleryIndex - 1 + galleryImages.length) % galleryImages.length;
+            document.getElementById('modalGalleryImage').src = galleryImages[currentGalleryIndex];
+        }
+
+        // Contrôles au clavier
+        document.addEventListener('keydown', (e) => {
+            const modal = document.getElementById('galleryModal');
+            if (modal.classList.contains('active')) {
+                if (e.key === 'Escape') closeGalleryModal();
+                if (e.key === 'ArrowRight') nextGalleryImage();
+                if (e.key === 'ArrowLeft') prevGalleryImage();
+            }
+        });
+
+        // Fermer en cliquant sur le fond
+        document.getElementById('galleryModal').addEventListener('click', (e) => {
+            if (e.target.id === 'galleryModal') closeGalleryModal();
+        });
+
+        // Initialiser la galerie au chargement
+        window.addEventListener('load', initGallery);
+//FIN GALLERIE D'IMAGES//

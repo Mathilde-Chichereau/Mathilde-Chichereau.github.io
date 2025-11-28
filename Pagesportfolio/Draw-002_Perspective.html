@@ -22,21 +22,28 @@
         <nav class="nav-menu"><a href="../index.html">Accueil</a>
         <a href="../portfolio.html">Portfolio</a>
         <a href="../cv.html">A propos</a>
-        <a href="../credits.html">Crédits</a></div>
+        <a href="../credits.html">Crédits</a></div></nav>
     </header>
     <div class="grid-explications">
     <div class="left"><h1>Perspective</h1>
     <p class="explications">J'ai appris la perspective lors de cours personnalisés de dessin, durant mon lycée. J'ai pu par la suite développer cette pratique avec d'autres cours notamment en classe préparatoire et première année à l'ESAD.</p></div>
     <img src="../Img/Portfolio_img/Perspective_001.webp">
     </div>
-    <div class="grid-images">
-    <img src="../Img/Portfolio_img/Perspective_002.webp" class="square">   
-    <img src="../Img/Portfolio_img/Perspective_002.webp" class="horizontal">
-    <img src="../Img/Portfolio_img/Perspective_002.webp"class="vertical">
-    <img src="../Img/Portfolio_img/Perspective_002.webp"class="square">
-    <img src="../Img/Portfolio_img/Perspective_002.webp">
-    <img src="#">
+    <div class="grid-images" id="galleryGrid">
+    <img src="../Img/Portfolio_img/Perspective_002.webp" data-index="0" class="square">   
+    <img src="../Img/Portfolio_img/Perspective_003.webp" data-index="1" class="horizontal">
+    <img src="../Img/Portfolio_img/Perspective_004.webp" data-index="2" class="square">
+    <img src="../Img/Portfolio_img/Perspective_005.webp" data-index="3" class="square">
+    <img src="../Img/Portfolio_img/Perspective_001.webp" data-index="4" class="horizontal">
+    <img src="../Img/Portfolio_img/Perspective_006.webp" data-index="5" class="square">
     </div>
+    <div class="gallery-modal" id="galleryModal">
+        <div class="gallery-modal-content">
+            <button class="modal-close" onclick="closeGalleryModal()">&times;</button>
+            <button class="modal-nav modal-prev" onclick="prevGalleryImage()">❮</button>
+            <img id="modalGalleryImage" src="" alt="">
+            <button class="modal-nav modal-next" onclick="nextGalleryImage()">❯</button>
+        </div>
     <script src="../script.js"></script>
 </body>
 </html>

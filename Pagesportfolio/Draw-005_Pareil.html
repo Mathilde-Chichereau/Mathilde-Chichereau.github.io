@@ -22,20 +22,35 @@
         <nav class="nav-menu"><a href="../index.html">Accueil</a>
         <a href="../portfolio.html">Portfolio</a>
         <a href="../cv.html">A propos</a>
-        <a href="../credits.html">Crédits</a></div>
+        <a href="../credits.html">Crédits</a></div></nav>
     </header>
     <div class="grid-explications">
     <div class="left"><h1>Pareil-pas-Pareil</h1>
     <p class="explications">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in porttitor justo. Maecenas sodales suscipit erat, quis commodo lectus mattis quis. Pellentesque tristique quis sapien id elementum. Morbi malesuada auctor condimentum. Duis a ipsum tellus.</p></div>
     <img src="../Img/Portfolio_img/Pareil_001.webp">
     </div>
-    <div class="grid-images">
-    <img src="../Img/Portfolio_img/Pareil_001.webp" class="square">   
-    <img src="../Img/Portfolio_img/Pareil_002.webp" class="horizontal">
-    <img src="../Img/Portfolio_img/Pareil_004.webp"class="vertical">
-    <img src="../Img/Portfolio_img/Pareil_003.webp"class="square">
-    <img src="../Img/Portfolio_img/Pareil_005.webp">
+    <div class="grid-images" id="galleryGrid">
+    <img src="../Img/Portfolio_img/Pareil_001.webp" data-index="0" class="square">   
+    <img src="../Img/Portfolio_img/Pareil_002.webp" data-index="1" class="horizontal">
+    <img src="../Img/Portfolio_img/Pareil_004.webp"data-index="2" class="vertical">
+    <img src="../Img/Portfolio_img/Pareil_003.webp"data-index="3" class="square">
+    <img src="../Img/Portfolio_img/Pareil_005.webp" data-index="4">
     <img src="#">
+    </div>
+     <div class="gallery-modal" id="galleryModal">
+        <div class="gallery-modal-content">
+            <button class="modal-close" onclick="closeGalleryModal()">&times;</button>
+            <button class="modal-nav modal-prev" onclick="prevGalleryImage()">❮</button>
+            <img id="modalGalleryImage" src="" alt="">
+            <button class="modal-nav modal-next" onclick="nextGalleryImage()">❯</button>
+        </div>
+        <div class="gallery-modal" id="galleryModal">
+        <div class="gallery-modal-content">
+            <button class="modal-close" onclick="closeGalleryModal()">&times;</button>
+            <button class="modal-nav modal-prev" onclick="prevGalleryImage()">❮</button>
+            <img id="modalGalleryImage" src="" alt="">
+            <button class="modal-nav modal-next" onclick="nextGalleryImage()">❯</button>
+        </div>
     </div>
  <script src="../script.js"></script>
 </body>
