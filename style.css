@@ -54,7 +54,7 @@ body {
   align-items: center;
   background-color: light-dark(var(--main-color-light) , var(--main-color));
   padding: 0 24px;
-  height: fit-content;
+  height: 90px;
   gap: 1rem;
   z-index: 1000;
 }
@@ -63,8 +63,9 @@ body {
   color:light-dark(var(--title-color-light) , var(--title-color));
   text-decoration: none;
   text-align: right;
+  align-items: start;
   border-bottom: none;
-  padding: 1.5rem;
+  padding: 0 1.5rem ;
   font-size: 1.5rem;
 }
 
@@ -74,6 +75,7 @@ body {
 
 .header img {
   align-self: left;
+  margin-top: 0;
   padding-right: 5rem;
 }
 
@@ -743,7 +745,7 @@ input[type='radio'][name='carousel'] {
 /*NAVIGATION ENTRE PROJETS PORTFOLIO*/
 .project-navigation {
   position: fixed;
-  top: 150px; /* Juste sous le header */
+  top: 100px; /* Juste sous le header */
   left: 0;
   right: 0;
   display: flex;
@@ -753,6 +755,10 @@ input[type='radio'][name='carousel'] {
   gap: 1rem;
   z-index: 999;
   transition: transform 0.3s ease-in-out;
+}
+
+.project-navigation.hide {
+  transform: translateY(-100%); /* Cache la navigation */
 }
 
 .nav-group {
