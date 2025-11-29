@@ -170,12 +170,56 @@ body {
 }
 
 /*Fin de Header*/
-
-.portfolio-presentation {
-  margin-top: 500px;
+/* 
+.fullpage-scroll {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
 }
 
-/*Début grille brouillon*/
+body > div {
+  scroll-snap-align: start;
+  height: 100vh;
+}
+
+.portfolio-presentation,
+.grid-drawing,
+.grid-medium {
+  scroll-snap-align: none;
+  height: auto;
+}*/
+/*FIN Scroll snap*/
+.portfolio-presentation {
+  margin-top: 500px;
+  font-size: clamp(2rem, 8vw, 20rem);
+  color: light-dark(var(--title-color-light), var(--title-color));
+}
+/*GRANDE GRILLE PLEINE PAGE*/
+.big-grid {
+display: grid;
+grid-template-columns: 1fr 2fr;
+background-color: light-dark(var(--sub-color-light), var(--sub-color));
+margin: 100px 50px;
+padding: 50px ;
+/* height: 150vh; */
+}
+
+.big-grid h1 {
+ font-size: 3rem ;
+ padding-bottom: 20px;
+}
+
+.big-grid p {
+  font-size: 1.25rem;
+  grid-column: 1/2;
+  margin: 0, 50px;
+  padding: 0 5px;
+}
+/*FIN GRANDE GRILLE PLEINE PAGE*/
+/*Début grille petite*/
 * {
   margin: 0;
 }
@@ -189,8 +233,7 @@ body {
   overflow: hidden;
   position: relative;
   border-radius: 15px;
-  /* min-height: 120px;
-            width: 200px; */
+
 }
 
 .drawing p,
@@ -247,7 +290,7 @@ body {
   }
 }
 
-/*Fin grille brouillon*/
+/*Fin grille petite*/
 /*Début grille médium*/
 .project-medium {
   display: flex;
