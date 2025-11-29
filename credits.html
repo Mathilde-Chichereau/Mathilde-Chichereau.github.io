@@ -6,7 +6,15 @@
     <title>Credits</title>
     <link rel="stylesheet" href="style.css"> 
      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-</head>
+    <label class="toggle-switch">
+    <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+    <label for="menu-toggle" class="menu-icon">
+    <span class="material-symbols-outlined icon-hamburger">menu</span>
+    <span class="material-symbols-outlined icon-close">close</span>
+    </label>
+</label>
+    <script src="./script.js"></script>
+    </head>
 <body>
     <header class="header">
         <a href="index.html" class="home"><img src="Img/logotype_purple.svg" alt="Logo de Mathilde Chichereau" width="80" height="80"></a>
@@ -17,9 +25,27 @@
     </label>
         <nav class="nav-menu"><a href="index.html">Accueil</a>
         <a href="portfolio.html">Portfolio</a>
-        <a href="cv.html">A propos</a>
-        <a href="credits.html">Crédits</a></div></nav>
+        <a href="cv.html">Mon profil</a>
+        <div class="credits-wrapper">
+        <a href="credits.html">A propos</a>
+        <div class="dropdown-menu">
+        <div class="dropdown-toggle">
+            <p>Mode lisibilité</p>
+            <label class="toggle-switch">
+                <input type="checkbox" id="toggle-accessible">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </div>
+</div></nav>
     </header>
-    <div class="credits"><p>Le caractère Faune utilisé sur ce site a été créé par Alice Savoie dans le cadre d’une commande du Centre national des arts plastiques en partenariat avec le Groupe Imprimerie Nationale</p></div>
+    <div class="credits"><p>Le caractère Faune utilisé sur ce site a été créé par Alice Savoie dans le cadre d’une commande du Centre national des arts plastiques en partenariat avec le Groupe Imprimerie Nationale</p><p>J'ai décidé de rajouter également un mode pour les personnes malvoyantes en augmentant le contraste, la taille des caractères ainsi qu'utilisant le caractère typographique Luciole développé par Laurent Bourcellier et une équipe de chercheurs.</p></div>
+    <div class="accessibilite">
+        <p>Mode lisibilité</p>
+        <label class="toggle-switch">
+            <input type="checkbox" id="toggle-accessible">
+            <span class="slider"></span>
+        </label>
+    </div>
 </body>
 </html>

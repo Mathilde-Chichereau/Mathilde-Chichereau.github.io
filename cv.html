@@ -6,7 +6,9 @@
     <title>CV</title>
     <link rel="stylesheet" href="style.css">
      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-</head>
+    <label class="toggle-switch"></label>
+    <script src="./script.js"></script>
+ </head>
 <body>
 <header class="header">
         <a href="index.html" class="home"><img src="Img/logotype_purple.svg" alt="Logo de Mathilde Chichereau" width="80" height="80"></a>
@@ -17,8 +19,17 @@
     </label>
         <nav class="nav-menu"><a href="index.html">Accueil</a>
         <a href="portfolio.html">Portfolio</a>
-        <a href="cv.html">A propos</a>
-        <a href="credits.html">Crédits</a></div></nav>
+        <a href="cv.html">Mon profil</a>
+        <div class="credits-wrapper">
+        <a href="credits.html">A propos</a>
+        <div class="dropdown-menu">
+        <div class="dropdown-toggle">
+            <p>Mode lisibilité</p>
+            <label class="toggle-switch">
+                <input type="checkbox" id="toggle-accessible">
+                <span class="slider"></span>
+            </label>
+        </div></nav>
     </header>
 
     <div class="parent-grid">
@@ -132,5 +143,5 @@
             </div>
         </div>
     </div>
-</body>
+   </body>
 </html>
