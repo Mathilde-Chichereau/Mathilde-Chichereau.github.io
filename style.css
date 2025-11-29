@@ -195,6 +195,43 @@ input:checked + .slider:before {
 .toggle-switch:hover .slider {
     opacity: 0.8;
 }
+
+/* Menu déroulant sur mobile */
+@media (max-width: 767px) {
+  .dropdown-menu {
+    position: static;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    margin-top: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .credits-wrapper:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+
+  .dropdown-toggle {
+    border-top: none;
+    padding: 15px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .dropdown-toggle p {
+    text-align: center;
+  }
+}
 /*FIN BOUTON ACCESSIBILITE */
 /*Header*/
 .header {
