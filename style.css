@@ -943,6 +943,11 @@ input[type='radio'][name='carousel'] {
   margin: 100px;
 }
 
+.credits a {
+  color: light-dark(var(--text-color-light), var(--text-color));
+  text-decoration: underline;
+}
+
 /*NAVIGATION ENTRE PROJETS PORTFOLIO*/
 .project-navigation {
   position: fixed;
