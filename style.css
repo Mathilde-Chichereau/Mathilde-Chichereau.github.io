@@ -878,13 +878,6 @@ input[type='radio'][name='carousel'] {
     aspect-ratio: 1 / 1;
 }
 
-/* Images panoramiques */
-.grid-images img[data-format="panoramic"],
-.grid-images img.panoramic {
-    grid-column: span 3;
-    aspect-ratio: 21 / 9;
-}
-
 /* Toutes les images */
 .grid-images img {
     object-fit: cover;
@@ -903,6 +896,23 @@ input[type='radio'][name='carousel'] {
 
 /* Responsive pour mobiles */
 @media (max-width: 768px) {
+    .grid-explications {
+        grid-template-columns: 1fr;
+        margin: 20px;
+    }
+
+    .grid-explications .left {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .grid-explications img {
+        grid-column: 1;
+        grid-row: 2;
+        width: 100%;
+        height: auto;
+        max-height: 300px;
+    }
     .grid-images {
         grid-template-columns: repeat(2, 1fr);
         grid-auto-rows: 150px;
@@ -1003,8 +1013,8 @@ input[type='radio'][name='carousel'] {
   }
 
   .nav-btn {
-    padding: 8px 12px;
-    font-size: 0.9rem;
+    padding: 10px 14px;
+    font-size: 1,5rem;
   }
 
   .nav-text {
@@ -1018,7 +1028,7 @@ input[type='radio'][name='carousel'] {
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .nav-btn {
-    padding: 10px 16px;
+    padding: 13px 17px;
   }
 }
 
