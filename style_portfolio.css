@@ -207,15 +207,18 @@ height: 80vh;
 margin: 100px 15px;
 padding: 50px ;
 border-radius: 15px;
-/* height: 150vh; */
+align-items: center;
+
 }
 .big-grid a {
   text-decoration: none;
   color: light-dark(var(--text-color-light), var(--text-color));
+  display: contents;  
 }
 .big-grid h1 {
  font-size: 3rem ;
  padding-bottom: 20px;
+ grid-column: 1/2;
 }
 
 .big-grid p {
@@ -223,6 +226,16 @@ border-radius: 15px;
   grid-column: 1/2;
   margin: 0, 50px;
   padding: 0 5px;
+}
+
+.big-image {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  justify-self: center;
+  justify-content: center;
+  grid-column: 2;
+  grid-row: 1/2;
 }
 /*FIN GRANDE GRILLE PLEINE PAGE*/
 /*Début grille petite*/
