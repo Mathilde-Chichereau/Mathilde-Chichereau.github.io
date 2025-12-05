@@ -57,8 +57,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 class PortfolioNavigation {
   constructor() {
-    // Liste de tous vos projets dans l'ordre d'affichage
+    // Liste de tous les projets dans l'ordre d'affichage
     this.projects = [
+      { url: 'Pagesportfolio/Big-001_Vinyle.html', title: 'Vinyles' },
       { url: 'Pagesportfolio/Draw-006_Zoo.html', title: 'Chiens des buissons' },
       { url: 'Pagesportfolio/Draw-005_Pareil.html', title: 'Pareil-Pas pareil' },
       { url: 'Pagesportfolio/Draw-004_Modele.html', title: 'Modèle vivant' },
@@ -67,7 +68,8 @@ class PortfolioNavigation {
       { url: 'Pagesportfolio/Draw-001_Ceramique.html', title: 'Céramiques' },
       // Ajoutez les projets medium quand leurs pages seront créées
       // { url: 'Pagesportfolio/Medium-002_Coffret.html', title: 'Coffret d\'artiste' },
-      { url: 'Pagesportfolio/Medium-001_Vaches.html', title: 'Série "les vaches"' },
+      { url: 'Pagesportfolio/Medium-002_Vaches.html', title: 'Série "les vaches"' },
+      { url: 'Pagesportfolio/Medium-003_IG.html', title: 'Itinéraires Graphiques' },
       // etc.
     ];
     
@@ -176,7 +178,7 @@ class PortfolioNavigation {
     });
   }
 
-  // 👇 AJOUTEZ TOUTE CETTE FONCTION ICI
+
   handleScrollVisibility(nav) {
     let lastScrollY = window.scrollY;
     let ticking = false;

@@ -828,7 +828,7 @@ input[type='radio'][name='carousel'] {
     grid-row: 1;
 }
 
-.grid-explications .left h1{
+.grid-explications h1{
   color: light-dark(var(--title-color-light), var(--title-color));
   margin-bottom: 1rem;
 }
@@ -878,6 +878,14 @@ input[type='radio'][name='carousel'] {
     aspect-ratio: 1 / 1;
 }
 
+/* Images horizontales grandes */
+.grid-images img[data-format="span"],
+.grid-images img.span {
+    grid-column: span 2;
+    grid-row: span 2;
+    aspect-ratio: 1 / 1;
+}
+
 /* Toutes les images */
 .grid-images img {
     object-fit: cover;
@@ -885,7 +893,7 @@ input[type='radio'][name='carousel'] {
     height: 100%;
 }
 
-/* Responsive pour tablettes */
+/* Responsive*/
 @media (max-width: 1024px) {
     .grid-images {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -894,7 +902,6 @@ input[type='radio'][name='carousel'] {
     }
 }
 
-/* Responsive pour mobiles */
 @media (max-width: 768px) {
     .grid-explications {
         grid-template-columns: 1fr;
@@ -1178,19 +1185,24 @@ body.has-project-nav {
         }
 /*FIN IMAGES CLIQUABLES PORTFOLIO*/
 /*/////////////////PAGES PORTFOLIO/////////////////*/
+.portfolio-presentation {
+  margin-top: 500px;
+  font-size: clamp(2rem, 8vw, 20rem);
+  color: light-dark(var(--title-color-light), var(--title-color));
+}
 /*GRANDE GRILLE PLEINE PAGE*/
 .big-grid {
-display: grid;
-grid-template-columns: 1fr 2fr;
-background-color: light-dark(var(--sub-color-light), var(--sub-color));
-background-size: cover;
-height: 80vh;
-margin: 100px 15px;
-padding: 50px ;
-border-radius: 15px;
-align-items: center;
-
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  background-color: light-dark(var(--sub-color-light), var(--sub-color));
+  background-size: cover;
+  height: 80vh;
+  margin: 100px 15px;
+  padding: 50px;
+  border-radius: 15px;
+  gap: 30px;
 }
+
 .big-grid a {
   text-decoration: none;
   color: light-dark(var(--text-color-light), var(--text-color));
@@ -1198,32 +1210,39 @@ align-items: center;
 }
 
 .text-block {
- grid-column: 1/2;
- align-items: start;
- align-self: start;
+  grid-column: 1;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .big-grid h1 {
- font-size: 3rem ;
- padding-bottom: 20px;
+  font-size: 3rem;
+  padding-top: 50px;
+  padding-bottom: 20px;
 }
 
 .big-grid p {
   font-size: 1.25rem;
-  margin: 0, 50px;
-  padding: 0 5px;
-  align-items: start;
+  margin:  50px 0;
+  padding: 0;
+}
+
+.little-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  align-items: center;
 }
 
 .big-image {
-  object-fit: cover;
-  height: 100%;
-  width: 100%;
-  justify-self: center;
-  justify-content: center;
   grid-column: 2;
-  grid-row: 1/2;
-  ruby-span: 2;
+  grid-row: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  align-items: center;
 }
 /*FIN GRANDE GRILLE PLEINE PAGE*/
 /*Début grille petite*/
