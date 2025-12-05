@@ -169,29 +169,6 @@ body {
   }
 }
 
-/*Fin de Header*/
-/* 
-.fullpage-scroll {
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
-}
-html {
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
-}
-
-body > div {
-  scroll-snap-align: start;
-  height: 100vh;
-}
-
-.portfolio-presentation,
-.grid-drawing,
-.grid-medium {
-  scroll-snap-align: none;
-  height: auto;
-}*/
-/*FIN Scroll snap*/
 .portfolio-presentation {
   margin-top: 500px;
   font-size: clamp(2rem, 8vw, 20rem);
