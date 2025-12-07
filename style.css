@@ -1201,6 +1201,7 @@ body.has-project-nav {
   padding: 50px;
   border-radius: 15px;
   gap: 30px;
+  align-items: stretch;
 }
 
 .big-grid a {
@@ -1231,18 +1232,59 @@ body.has-project-nav {
 
 .little-image {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  align-items: center;
+  max-height: calc(80vh - 100px);
+  object-fit: contain;
+
 }
 
 .big-image {
   grid-column: 2;
   grid-row: 1;
   width: 100%;
-  height: 100%;
+  max-height: 100%;
   object-fit: cover;
-  align-items: center;
+}
+
+@media (max-width: 1080px) {
+  .big-grid {
+    grid-template-columns: 1fr;
+    height: auto;
+    margin: 50px 15px;
+    padding: 40px;
+    gap: 20px;
+  }
+
+  .text-block {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .big-image {
+    grid-column: 1;
+    grid-row: 2;
+    height: 400px;
+  }
+}
+
+/* Mobile - 480px et moins */
+@media (max-width: 768px) {
+  .big-grid {
+    grid-template-columns: 1fr;
+    height: auto;
+    margin: 30px 10px;
+    padding: 25px;
+    gap: 15px;
+  }
+  .text-block {
+    grid-column: 1;
+    grid-row: 1;
+  }
+    .big-image {
+    grid-column: 1;
+    grid-row: 2;
+    height: 100%;
+    aspect-ratio: 16 / 9;
+  }
 }
 /*FIN GRANDE GRILLE PLEINE PAGE*/
 /*Début grille petite*/
