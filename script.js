@@ -68,8 +68,11 @@ class PortfolioNavigation {
       { url: 'Pagesportfolio/Draw-001_Ceramique.html', title: 'Céramiques' },
       // Ajoutez les projets medium quand leurs pages seront créées
       // { url: 'Pagesportfolio/Medium-002_Coffret.html', title: 'Coffret d\'artiste' },
+      { url: 'Pagesportfolio/Medium-001_SC.html', title: 'Itinéraires Graphiques' },
       { url: 'Pagesportfolio/Medium-002_Vaches.html', title: 'Série "les vaches"' },
       { url: 'Pagesportfolio/Medium-003_IG.html', title: 'Itinéraires Graphiques' },
+      { url: 'Pagesportfolio/Medium-004_Papercut.html', title: 'Itinéraires Graphiques' },
+      { url: 'Pagesportfolio/Medium-005_Destriophilie.html', title: 'Itinéraires Graphiques' },
       // etc.
     ];
     
