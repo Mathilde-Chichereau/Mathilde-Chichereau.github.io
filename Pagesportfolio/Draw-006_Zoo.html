@@ -22,6 +22,7 @@
         <nav class="nav-menu"><a href="../index.html">Accueil</a>
         <a href="../portfolio.html">Portfolio</a>
         <a href="../cv.html">Mon profil</a>
+        <div class="credits-wrapper">
         <a href="credits.html">A propos</a>
         <div class="dropdown-menu">
         <div class="dropdown-toggle">
@@ -30,8 +31,36 @@
                 <input type="checkbox" id="toggle-accessible">
                 <span class="slider"></span>
             </label>
-        </div></nav>
+        </div></nav></nav>
     </header>
+    <div class="grid-explications">
+    <div class="left"><h1>Chiens des buissons</h1>
+    <p class="explications">Travail au zoo d'Amiens sur les chiens des buissons (Speothos venaticus)</p></div>
+    <img src="../Img/Portfolio_img/Pareil_001.webp">
+    </div>
+    <div class="grid-images" id="galleryGrid">
+    <img src="../Img/Portfolio_img/Pareil_001.webp" data-index="0" class="square" alt="Motif pareil pas-pareil">   
+    <img src="../Img/Portfolio_img/Pareil_002.webp" data-index="1" class="horizontal" alt="Motif pareil pas-pareil">
+    <img src="../Img/Portfolio_img/Pareil_004.webp"data-index="2" class="vertical" alt="Motif pareil pas-pareil">
+    <img src="../Img/Portfolio_img/Pareil_003.webp"data-index="3" class="square" alt="Motif pareil pas-pareil">
+    <img src="../Img/Portfolio_img/Pareil_005.webp" data-index="4" class="square" alt="Planche contact d'inspirations, pastiche d'artistes">
+    <img src="../Img/Portfolio_img/Pareil_006.webp" data-index="4" class="square" alt="Planche contact d'inspirations, pastiche d'artistes">
+    </div>
+     <div class="gallery-modal" id="galleryModal">
+        <div class="gallery-modal-content">
+            <button class="modal-close" onclick="closeGalleryModal()">&times;</button>
+            <button class="modal-nav modal-prev" onclick="prevGalleryImage()">❮</button>
+            <img id="modalGalleryImage" src="" alt="">
+            <button class="modal-nav modal-next" onclick="nextGalleryImage()">❯</button>
+        </div>
+        <div class="gallery-modal" id="galleryModal">
+        <div class="gallery-modal-content">
+            <button class="modal-close" onclick="closeGalleryModal()">&times;</button>
+            <button class="modal-nav modal-prev" onclick="prevGalleryImage()">❮</button>
+            <img id="modalGalleryImage" src="" alt="">
+            <button class="modal-nav modal-next" onclick="nextGalleryImage()">❯</button>
+        </div>
+    </div>
  <script src="../script.js"></script>
 </body>
 </html>

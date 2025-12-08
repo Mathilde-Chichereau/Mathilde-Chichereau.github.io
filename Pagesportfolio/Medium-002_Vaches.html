@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil</title>
+    <title>Sandrine Collette</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,400,0,0&icon_names=arrow_right_alt" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,400,0,0&icon_names=close" />
@@ -31,8 +31,35 @@
                 <input type="checkbox" id="toggle-accessible">
                 <span class="slider"></span>
             </label>
-        </div></div></nav>
+        </div></nav>
     </header>
- <script src="../script.js"></script>
+ <div class="grid-explications">
+    <div class="left"><h1>Série "Les Vaches"</h1>
+    <p class="explications">Charlotte <br>
+Marguerite <br> Celestine <br>Travail en trinôme de sérigraphie. Superpositions, jeux de couleur et dégradés. Format raisin cartonné ou sur feuilleD’autres ont été redécoupés au format carte postale.<br><br>Dimensions affiches : 45×64cm</p></div>
+    <img src="../Img/Portfolio_img/PurpleColor/other/projet_006_vachesansvaches.webp">
+    </div>
+    <div class="grid-images" id="galleryGrid"> 
+    <img src="../Img/Portfolio_img/Vaches__001_VachesPortées.webp" data-index="0" class="vertical">  
+    <img src="../Img/Portfolio_img/Vaches__002_VachesPortées.webp" data-index="1" class="vertical">
+    <img src="../Img/Portfolio_img/Vaches__005_Ensemble.webp" data-index="2" class="span">
+    <img src="../Img/Portfolio_img/Vaches__004_Coupées.webp" data-index="3" class="square">
+    <img src="../Img/Portfolio_img/Vaches__003_VachesPortées.webp" data-index="4" class="vertical">
+    <img src="../Img/Portfolio_img/Vaches__006.webp" data-index="5" class="square">
+    <img src="../Img/Portfolio_img/Vaches__0007.webp" data-index="6" class="square">
+    <img src="../Img/Portfolio_img/Vaches__008.webp" data-index="7" class="vertical">
+    <img src="../Img/Portfolio_img/Vaches__009.webp" data-index="8" class="square">
+    <img src="../Img/Portfolio_img/Vaches__010_003.webp" data-index="9" class="square">
+    <img src="../Img/Portfolio_img/Vaches__011.webp" data-index="10" class="square">
+    <img src="../Img/Portfolio_img/Vaches__Autre.webp" data-index="11" class="horizontal">
+</div>
+    <div class="gallery-modal" id="galleryModal">
+        <div class="gallery-modal-content">
+            <button class="modal-close" onclick="closeGalleryModal()">&times;</button>
+            <button class="modal-nav modal-prev" onclick="prevGalleryImage()">❮</button>
+            <img id="modalGalleryImage" src="" alt="">
+            <button class="modal-nav modal-next" onclick="nextGalleryImage()">❯</button>
+        </div>
+    <script src="../script.js"></script>
 </body>
 </html>
