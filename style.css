@@ -987,7 +987,7 @@ input[type='radio'][name='carousel'] {
   align-items: center;
   gap: 8px;
   background-color: light-dark(var(--title-color-light), var(--title-color));
-  color: light-dark(var(--main-color-light), var(--text-color));
+  color: light-dark(var(--text-color-light), var(--text-color));
   border: none;
   padding: 10px 20px;
   border-radius: 8px;
