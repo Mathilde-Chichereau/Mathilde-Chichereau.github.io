@@ -12,13 +12,13 @@
 
 @font-face {
   font-family: 'Luciole';
-  src: url(Fonts/Luciole-Regular.woff2) format('ttf');
+  src: url(Fonts/Luciole-Regular.woff2) format('woff2');
   font-weight: 400; 
 }
 
 @font-face {
   font-family: 'Luciole';
-  src: url(Fonts/Luciole-Bold.woff2) format('ttf');
+  src: url(Fonts/Luciole-Bold.woff2) format('woff2');
   font-weight: 1000; 
 }
 
