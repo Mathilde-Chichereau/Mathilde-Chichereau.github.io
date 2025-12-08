@@ -999,6 +999,7 @@ input[type='radio'][name='carousel'] {
 
 .nav-btn:hover:not(:disabled) {
   background-color: light-dark(var(--text-color-light), var(--main-color));
+  color: light-dark(var(--main-color-light), var(--text-color)) ;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
@@ -1017,7 +1018,8 @@ input[type='radio'][name='carousel'] {
 }
 
 .nav-home:hover {
-  background-color: light-dark(var(--title-color-light), var(--title-color));
+  background-color: light-dark(var(--title-color-light), var(--main-color));
+  color: light-dark(var(--main-color-light), var(--text-color)) ;
 }
 
 /* Responsive */
