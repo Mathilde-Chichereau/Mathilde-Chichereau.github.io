@@ -15,7 +15,7 @@
   src: url(Fonts/Luciole-Regular.woff2) format('woff2');
   font-weight: 400; 
 }
-
+             
 @font-face {
   font-family: 'Luciole';
   src: url(Fonts/Luciole-Bold.woff2) format('woff2');
@@ -66,7 +66,13 @@ body.accessible-font {
   --text-color-light: #383A66;
 }
 
-
+/*Haut de page*/
+.header-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
 /* Menu déroulant Crédits */
 .credits-wrapper {
     position: relative;
