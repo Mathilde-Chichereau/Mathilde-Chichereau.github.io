@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="Img/Logotype_MC.svg">
+    <title>CV</title>
+    <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <label class="toggle-switch"></label>
+    <script src="./script.js"></script>
+ </head>
+<body>
+<header class="header">
+        <a href="index.html" class="home"><img src="Img/logotype_purple.svg" alt="Logo de Mathilde Chichereau" width="80" height="80"></a>
+        <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+        <label for="menu-toggle" class="menu-icon">
+         <span class="material-symbols-outlined icon-hamburger">menu</span>
+         <span class="material-symbols-outlined icon-close">close</span>
+    </label>
+        <nav class="nav-menu"><a href="index.html">Accueil</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="cv.html">Mon profil</a>
+        <div class="credits-wrapper">
+        <a href="credits.html">A propos</a>
+        <div class="dropdown-menu">
+        <div class="dropdown-toggle">
+            <p>Mode lisibilité</p>
+            <label class="toggle-switch">
+                <input type="checkbox" id="toggle-accessible">
+                <span class="slider"></span>
+            </label>
+        </div></nav>
+    </header>
+<div class="cv-presentation fullpage-scroll"><p>Curriculum Vitæ</p></div>
+    <div class="parent-grid">
+        <div class="presentation">
+            <h3>Présentation</h3>
+            <p class="long-text">En deuxième année d'études de design graphique à l'ESAD d'Amiens</p>
+            <div class="child-grid">
+                <p class="categorie">Mail</p>
+                <p class="info">mathilde@chichereau.fr</p>
+                <p class="categorie">Instagram</p>
+                <p class="info">mathilde_chichereau</p>
+                <p class="categorie">Age</p>
+                <p class="info">20 ans</p>
+                <p class="categorie">Date de naissance</p>
+                <p class="info">20/06/2005</p>
+            </div>
+            <div class="child-grid">
+                <p class="categorie">Titulaire du</p>
+                <p class="info">Psc1</p>
+                <p class="info">Permis de conduire B</p>
+                <p class="categorie">Langues</p>
+                <p class="info">Anglais (niveau B1)</p>
+                <p class="info">Espagnol (niveau A1)</p>
+                <p class="categorie">Logiciels</p>
+                <p class="info">Microsoft Office</p>
+                <p class="info">Indesign</p>
+                <p class="info">Illustrator</p>
+                <p class="info">Photoshop</p>
+                <p class="info">Première pro/DaVinci resolve</p>
+
+            </div>
+        </div>
+
+        <div class="carousel-container">
+            <!-- Inputs radio pour contrôler le carrousel -->
+            <input type="radio" name="carousel" id="slide1" checked>
+            <input type="radio" name="carousel" id="slide2">
+            <input type="radio" name="carousel" id="slide3">
+
+            <div class="carousel-header">
+                <h3 id="carousel-title"></h3>
+                <div class="carousel-arrows">
+                    <!-- Flèches pour slide 1 -->
+                    <label for="slide3" class="prev-slide3" title="Précédent">←</label>
+                    <label for="slide2" class="next-slide2" title="Suivant">→</label>
+                    <!-- Flèches pour slide 2 -->
+                    <label for="slide1" class="prev-slide1" title="Précédent">←</label>
+                    <label for="slide3" class="next-slide3" title="Suivant">→</label>
+                    <!-- Flèches pour slide 3 -->
+                    <label for="slide2" class="prev-slide2" title="Précédent">←</label>
+                    <label for="slide1" class="next-slide1" title="Suivant">→</label>
+                </div>
+            </div>
+
+            <div class="carousel-wrapper">
+                <div class="carousel-slides">
+                    <!-- Slide 1 : Scolarité -->
+                    <div class="carousel-slide">
+                        <h4>À l'ESAD d'Amiens</h4>
+                        <p class="legende">(Ecole Supérieure d'Art et de Design)</p>
+                        <p class="long-text">Cours de : dessin, typographie, design graphique, photo, volume, webdesign, analyse de l'image</p>
+                        <h4>À l'EPSAA (2024)</h4>
+                        <p class="legende">(Ecole Parisienne Supérieure d'Arts Appliqués)</p>
+                        <p>Classe préparatoire sur un an</p>
+                        <h4>À l'EREA Toulouse-Lautrec (2018-2023)</h4>
+                        <p>- Conseil de la vie lycéenne (2021-2023)</p>
+                        <p>- Déléguée de classe (2021-2023)</p>
+                        <p class="long-text">- Suppléante au Conseil Académique de Vie Lycéenne de Versailles (2023)</p>
+                        <p>- Ambassadrice culture (2021-2023)</p>
+                        <p>- Stage découverte de troisième à Disneyland Paris</p>
+                    </div>
+
+                    <!-- Slide 2 : Expériences -->
+                    <div class="carousel-slide">
+                        <h4>Vendeuse en poissonnerie (été 2025)</h4>
+                        <p>-Accueil et conseil client, préparation et découpe de produits, gestion des encaissements, suivi des commandes et des stocks</p>
+                        <p>- Relation client, réponse adaptée à une demande client, gestion de caisse, organisation</p>
+                        <h4>Série TF1 "Lycée Toulouse-Lautrec" (été 2023-2022)</h4>
+                        <p>- Rôle de figuration</p>
+                        <p>- Observation des différents métiers du cinéma et découverte du domaine</p>
+                        <h4>Babysitting</h4>
+                        <p>- Enfants de 1 à 13 ans</p>
+                        <p>- Apprentissage de la patience, animation, rôle rassurant</p>
+                    </div>
+
+                    <!-- Slide 3 : Loisirs -->
+                    <div class="carousel-slide">
+                        <h4>Arts</h4>
+                        <p>- Dessin</p>
+                        <p>- Céramique (2011-2023)</p>
+                        <h4>Sport</h4>
+                        <p>- Danse classique (2008-2017)</p>
+                        <p>- Danse modern'jazz (2019-2020)</p>
+                        <h4>Musique</h4>
+                        <p>- violoncelle, formation musicale C1/3 au conservatoire (2011-2016)</p>
+                        <h4>Actions bénévoles sociales</h4>
+                        <p>- Participation aux maraudes de la Mission Saint-Leu (2025)</p>
+                        <p>- Bénévole à la Croix-Rouge Jeunesse (2017-2019)</p>
+                        <h4>Aux Guides et Scouts d'Europe</h4>
+                        <p>- Membre de l'AGSE (2013-2020)</p>
+                        <p>Cheftaine de patrouille guides (2020)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <div class="carousel-nav">
+                <label for="slide1" title="Scolarité"></label>
+                <label for="slide2" title="Expériences"></label>
+                <label for="slide3" title="Compétences"></label>
+            </div>
+        </div>
+    </div>
+   </body>
+</html>

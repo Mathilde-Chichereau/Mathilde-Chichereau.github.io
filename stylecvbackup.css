@@ -1,0 +1,174 @@
+/*DEBUT DU CV*/
+.cv-presentation {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin-top: 50px;
+  font-size: clamp(2rem, 8vw, 20rem);
+  color: light-dark(var(--title-color-light), var(--title-color));
+}
+.parent-grid {
+  gap: 20px;
+  max-width: 1200px;
+  margin: 150px;
+}
+
+.presentation {
+  background: light-dark(var(--sub-color-light) , var(--sub-color));
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.child-grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.categorie {
+  grid-column: 1;
+  font-weight: bold;
+  margin: 0;
+}
+
+.info {
+  grid-column: 2;
+  margin: 0;
+}
+
+.long-text {
+  margin: 15px 0;
+}
+
+/* Styles du carrousel */
+.carousel-container {
+  background: light-dark(var(--sub-color-light) , var(--sub-color));
+  padding: 20px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.carousel-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-slides {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Cacher les inputs radio */
+input[type='radio'][name='carousel'] {
+  display: none;
+}
+
+/* Navigation du carrousel */
+.carousel-nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.carousel-nav label {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.carousel-nav label:hover {
+  background-color: #999;
+}
+
+/* Déplacement des slides selon le radio sélectionné */
+#slide1:checked ~ .carousel-wrapper .carousel-slides {
+  transform: translateX(0%);
+}
+
+#slide2:checked ~ .carousel-wrapper .carousel-slides {
+  transform: translateX(-100%);
+}
+
+#slide3:checked ~ .carousel-wrapper .carousel-slides {
+  transform: translateX(-200%);
+}
+
+/* Coloration des indicateurs */
+#slide1:checked ~ .carousel-nav label[for='slide1'],
+#slide2:checked ~ .carousel-nav label[for='slide2'],
+#slide3:checked ~ .carousel-nav label[for='slide3'] {
+  background-color: #333;
+}
+
+/* Boutons de navigation flèche */
+.carousel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 15px;
+}
+
+.carousel-header h3 {
+  margin: 0;
+}
+
+.carousel-arrows {
+  display: flex;
+  gap: 10px;
+}
+
+.carousel-arrows label {
+  width: 40px;
+  height: 40px;
+  color: light-dark(var(--text-color-light) , var(--text-color));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 18px;
+  transition: color 0.3s;
+  user-select: none;
+}
+
+.carousel-arrows label:hover {
+  color:light-dark(var(--main-color-light) , var(--main-color));
+}
+
+.carousel-arrows label:active {
+  color: #000;
+}
+
+/* Cacher les flèches par défaut */
+.carousel-arrows label {
+  display: none;
+}
+
+/* Afficher les bonnes flèches selon la slide active */
+#slide1:checked ~ .carousel-header .prev-slide3,
+#slide1:checked ~ .carousel-header .next-slide2,
+#slide2:checked ~ .carousel-header .prev-slide1,
+#slide2:checked ~ .carousel-header .next-slide3,
+#slide3:checked ~ .carousel-header .prev-slide2,
+#slide3:checked ~ .carousel-header .next-slide1 {
+  display: flex;
+}
+
+/* Changer le titre selon la slide active */
+#carousel-title::before {
+  content: 'Scolarité';
+}
+#slide2:checked ~ .carousel-header #carousel-title::before {
+  content: 'Expériences professionnelles';
+}
+#slide3:checked ~ .carousel-header #carousel-title::before {
+  content: 'Loisirs et actions bénévoles';
+}
