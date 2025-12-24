@@ -714,6 +714,78 @@ h4 {
     gap: 5px;
 }
 
+/*Formation*/
+.formation-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    margin : 100px, 25px ;
+    min-height: 100vh;
+    background-color:light-dark(var(--title-color-light), var(--title-color));
+}
+
+.formation-left {
+    padding: 200px 100px;
+    display: flex;
+    align-items: start;
+    /* justify-content: center; */
+    font-size: clamp(3rem, 10vw, 4rem);
+    font-weight: 700;
+    color: light-dark(var(--title-color-light), var(--title-color));
+    line-height: 1;
+    grid-column: 2;
+  }
+
+.formation-right {
+    padding: 150px 60px;
+    color: light-dark(var(--text-color-light), var(--text-color));
+    font-size: 1rem;
+    grid-column: 1;
+}
+
+.formation-section {
+    margin-bottom: 40px;
+}
+
+.section-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0 0 10px 0;
+}
+
+.section-content {
+    line-height: 1.6;
+}
+
+.cv-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cv-row {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.formation-title {
+    font-weight: 600;
+    padding-top : 30px ;
+    color: light-dark(var(--text-color-light), var(--text-color));
+}
+
+.formation-content {
+    color: light-dark(var(--text-color-light), var(--text-color));
+}
+
+.cv-value-block {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
 /* RESPONSIVE - Écran normal à tablette (jusqu'à 1024px) */
 @media (max-width: 1024px) {
     .cv-container {
@@ -858,6 +930,7 @@ h4 {
         font-size: 0.85rem;
     }
 }
+
 
 /*FIN DU CV*/
 /*DEBUT PAGE PORTFOLIO*/
