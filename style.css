@@ -1052,9 +1052,11 @@ h4 {
     /* Formations */
     .purple-container {
         grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
         height: auto;
         margin: 0;
         height: 100dvh;
+        justify-content: start;
     }
 
     .column-title-right {
@@ -1102,7 +1104,7 @@ h4 {
     }
 
     .column-content-right {
-        padding: 10px 20px;
+        padding: 0px 20px;
         grid-column: 1;
     }
 
