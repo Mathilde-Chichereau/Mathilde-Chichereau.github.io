@@ -715,75 +715,170 @@ h4 {
 }
 
 /*Formation*/
-.formation-container {
+.purple-container {
     display: grid;
+    align-items: start;
     grid-template-columns: 1fr 1fr;
     gap: 0;
-    margin : 100px, 25px ;
+    margin: 50px 0;
     min-height: 100vh;
-    background-color:light-dark(var(--title-color-light), var(--title-color));
+    background-color: light-dark(var(--title-color-light), var(--title-color));
 }
 
-.formation-left {
-    padding: 200px 100px;
-    display: flex;
+.column-title-right {
+    padding: 80px 0 0 100px;
     align-items: start;
-    /* justify-content: center; */
-    font-size: clamp(3rem, 10vw, 4rem);
-    font-weight: 700;
-    color: light-dark(var(--title-color-light), var(--title-color));
-    line-height: 1;
     grid-column: 2;
-  }
+    grid-row: 1;
+}
 
-.formation-right {
-    padding: 150px 60px;
+.title-right {
+    font-size: clamp(5rem, 10vw, 4rem);
+    font-weight: 700;
+    color: light-dark(var(--main-color-light), var(--main-color));
+    line-height: 1;
+}
+
+.column-content-left {
+    padding: 180px 100px;
     color: light-dark(var(--text-color-light), var(--text-color));
-    font-size: 1rem;
-    grid-column: 1;
-}
-
-.formation-section {
-    margin-bottom: 40px;
-}
-
-.section-title {
-    font-size: 1.3rem;
-    font-weight: 600;
-    margin: 0 0 10px 0;
-}
-
-.section-content {
-    line-height: 1.6;
-}
-
-.cv-grid {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    grid-column: 1;
+    grid-row: 1;
+    align-items: start;
 }
 
-.cv-row {
-    display: grid;
-    grid-template-columns: 150px 1fr;
-    gap: 30px;
-    align-items: flex-start;
+.formation-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.formation-item h3 {
+    font-weight: 600;
+    margin: 0;
+    color: light-dark(var(--text-color-light), var(--text-color));
+}
+
+.title-category {
+    font-size: clamp(7rem, 10vw, 4rem);
+    font-weight: 700;
+    color: light-dark(var(--main-color-light), var(--main-color));
+    line-height: 1;
+    margin: 0;
+    padding-top: 50px;
 }
 
 .formation-title {
+    font-size: 1.5rem ; 
+    font-weight: 700;
+    color: light-dark(var(--main-color-light), var(--main-color));
+    line-height: 1;
+    margin: 0;
+    padding-top: 50px;
+}
+
+.formation-subtitle {
     font-weight: 600;
-    padding-top : 30px ;
+    margin: 0;
+    opacity: 0.9;
+    padding-bottom: 10px ;
     color: light-dark(var(--text-color-light), var(--text-color));
 }
 
 .formation-content {
+    /* line-height: 1.6; */
+    margin: 0;
     color: light-dark(var(--text-color-light), var(--text-color));
 }
 
-.cv-value-block {
+/*Expériences*/
+.grey-container {
+    display: grid;
+    align-items: start;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    margin: 50px 0;
+    min-height: 100vh;
+}
+
+.column-title-left {
+    padding: 80px 0 0 100px;
+    align-items: start;
+    grid-row: 1;
+}
+
+.title-category-purple {
+    font-size: clamp(7rem, 10vw, 4rem);
+    font-weight: 700;
+    color: light-dark(var(--title-color-light), var(--title-color));
+    line-height: 1;
+    margin: 0;
+    padding-top: 50px;
+}
+
+.column-content-right {
+    padding: 180px 60px;
+    color: light-dark(var(--text-color-light), var(--text-color));
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    grid-column: 2;
+    grid-row: 1;
+    align-items: start;
+}
+
+.experience-title {
+    font-size: 1.5rem ; 
+    font-weight: 700;
+    color: light-dark(var(--main-color-light), var(--main-color));
+    line-height: 1;
+    margin: 0;
+    padding-top: 50px;
+    padding-bottom: 10px ;
+}
+
+/*Loisirs*/
+.loisirs-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    margin: 50px 0;
+}
+
+/* .loisirs-container .column-title-right {
+    padding: 80px 0 0 150px;
+    grid-column: 2;
+    grid-row: 1;
+    z-index: 10; 
+} */
+
+/* .loisirs-container .column-content-left {
+    padding: 180px 60px 0 0;
+    display: flex;
+    flex-direction: column;
+    grid-column: 1;
+    grid-row: 1;
+} */
+
+.loisirs-container .column-content-right {
+    padding: 426px 0;
+    display: flex;
+    flex-direction: column;
+    grid-column: 2;
+    grid-row: 1;
+    padding-right: 80px;
+    margin-left: -200px;
+}
+
+.loisirs-container .column-content-ter {
+    padding: 426px 0 0 0px;
+    display: flex;
+    flex-direction: column;
+    grid-column: 3;
+    grid-row: 1;
+    padding-right: 80px;
+    margin-left: -400px;
 }
 
 /* RESPONSIVE - Écran normal à tablette (jusqu'à 1024px) */
