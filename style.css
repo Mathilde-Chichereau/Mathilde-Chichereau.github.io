@@ -657,7 +657,7 @@ h4 {
     grid-template-columns: 1fr 1fr;
     gap: 0;
     margin : 100px, 25px ;
-    min-height: 100vh;
+    min-height: 110vh;
       scroll-snap-align: start;
       scroll-snap-stop: always;
       scroll-margin-top: 80px;
@@ -728,13 +728,14 @@ h4 {
     align-items: start;
     grid-template-columns: 1fr 1fr;
     gap: 0;
-    margin: 50px 0;
-    height: 100vh;
+    margin: 20px 0 0;
+    height: 80vh;
     background-color: light-dark(var(--title-color-light), var(--title-color));
     box-sizing: border-box;
       scroll-snap-align: start;
       scroll-snap-stop: always;
-      scroll-margin-top: 70px;
+      scroll-margin-top: 200px;
+    position: relative ;
   }
 
 .column-title-right {
@@ -752,7 +753,7 @@ h4 {
 }
 
 .column-content-left {
-    padding: 180px 100px;
+    padding: 36px 100px;
     color: light-dark(var(--text-color-light), var(--text-color));
     display: flex;
     flex-direction: column;
@@ -776,10 +777,13 @@ h4 {
 .title-category {
     font-size: clamp(7rem, 10vw, 4rem);
     font-weight: 700;
-    color: light-dark(var(--main-color-light), var(--main-color));
+    color: light-dark(var(--title-color-light), var(--title-color)) ;
     line-height: 1;
     margin: 0;
     padding-top: 50px;
+    position: absolute ;
+    top: -150px;
+    right: 0;
 }
 
 .formation-title {
@@ -812,10 +816,10 @@ h4 {
     grid-template-columns: 1fr 1fr;
     gap: 0;
     margin: 50px 0;
-    min-height: 100vh;
+    min-height: 80vh;
       scroll-snap-align: start;
       scroll-snap-stop: always;
-      scroll-margin-top: 80px;
+      scroll-margin-top: 70px;
 }
 
 .column-title-left {
@@ -861,7 +865,7 @@ h4 {
     margin: 50px 0;
       scroll-snap-align: start;
       scroll-snap-stop: always;
-      scroll-margin-top: 80px;
+      scroll-margin-top: 200px;
 }
 
 .loisirs-container .column-content-right {
@@ -1002,7 +1006,7 @@ h4 {
     }
 
     .cv-left {
-        padding: 50px 20px;
+        padding: 50px 20px 20px;
         font-size: clamp(1.8rem, 6vw, 2.8rem);
         border-bottom: 2px solid var(--accent-purple);
         align-items: center;
@@ -1011,7 +1015,7 @@ h4 {
     }
 
     .cv-right {
-        padding: 50px 20px;
+        padding: 20px 20px;
     }
 
     .cv-section {
@@ -1024,7 +1028,7 @@ h4 {
     }
 
     .section-content {
-        font-size: 0.85rem;
+        font-size: clamp(1rem, 3vw, 2rem);
         line-height: 1.5;
     }
 
@@ -1038,21 +1042,27 @@ h4 {
     }
 
     .cv-label {
-        font-size: 0.85rem;
+        font-size: clamp(1rem, 3vw, 2rem);
     }
 
     .cv-value {
-        font-size: 0.85rem;
+        font-size: clamp(1rem, 3vw, 2rem);
+        padding-left: 90px;
     }
 
     .cv-value-block span {
-        font-size: 0.85rem;
+        font-size: clamp(1rem, 3vw, 2rem);
+        margin-left: 90px;
     }
-
+    a.cv-value {
+      text-decoration: underline;
+      padding-left: 0;
+    }
     /* Formations */
     .purple-container {
         grid-template-columns: 1fr;
-        grid-template-rows: auto auto;
+        grid-template-rows: auto 1fr;
+        gap: 32px;
         height: auto;
         margin: 0;
         height: 100dvh;
@@ -1066,29 +1076,32 @@ h4 {
 
     .title-category {
         font-size: clamp(2rem, 15vw, 6rem);
+        top: -105px;
     }
 
     .column-content-left {
-        padding: 30px 20px;
+        padding: 0px 20px;
         grid-column: 1;
     }
 
     .formation-title {
-        font-size: 1rem;
-        padding-top: 15px;
+        font-size: clamp(1rem, 5vw, 5rem);
+        padding-top: 30px;
     }
 
     .formation-subtitle {
-        font-size: 0.75rem;
+        font-size: clamp(1rem, 3vw, 2rem);
     }
 
     .formation-content {
-        font-size: 0.8rem;
+        font-size: clamp(1rem, 3vw, 2rem);
     }
 
     /* Expériences */
     .grey-container {
         grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+        gap: 32px;
         min-height: auto;
         margin: 0;
         height: 100dvh;
@@ -1109,8 +1122,8 @@ h4 {
     }
 
     .experience-title {
-        font-size: 1rem;
-        padding-top: 15px;
+        font-size: clamp(1rem, 5vw, 5rem);
+        padding-top: 30px;
     }
 
     /* Loisirs */
