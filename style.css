@@ -1067,6 +1067,7 @@ h4 {
         margin: 0;
         height: 100dvh;
         justify-content: start;
+        margin-top: 60px;
     }
 
     .column-title-right {
@@ -1082,7 +1083,7 @@ h4 {
     }
 
     .column-content-left {
-        padding: 0px 20px;
+        padding: 60px 20px 0;
         grid-column: 1;
     }
 
