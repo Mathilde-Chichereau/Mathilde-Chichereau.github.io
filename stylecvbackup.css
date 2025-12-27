@@ -1,174 +1,264 @@
-/*DEBUT DU CV*/
-.cv-presentation {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  margin-top: 50px;
-  font-size: clamp(2rem, 8vw, 20rem);
-  color: light-dark(var(--title-color-light), var(--title-color));
-}
-.parent-grid {
-  gap: 20px;
-  max-width: 1200px;
-  margin: 150px;
+@media (max-width: 1024px) {
+    .cv-container {
+        grid-template-columns: 1fr 1fr;
+        margin: 50px 15px;
+        min-height: auto;
+    }
+
+    .cv-left {
+        padding: clamp(60px, 8vw, 100px) clamp(30px, 4vw, 40px);
+        font-size: clamp(2rem, 5vw, 3.5rem);
+    }
+
+    .cv-right {
+        padding: clamp(60px, 8vw, 100px) clamp(20px, 3vw, 30px);
+    }
+
+    .cv-row {
+        grid-template-columns: 120px 1fr;
+        gap: 20px;
+    }
+
+    .section-title {
+        font-size: 1.1rem;
+    }
+
+    .section-content {
+        font-size: 0.9rem;
+    }
+
+    .cv-label {
+        font-size: 0.9rem;
+    }
+
+    .cv-value {
+        font-size: 0.9rem;
+    }
+
+    .cv-value-block span {
+        font-size: 0.9rem;
+    }
+
+    /* Formations */
+    .purple-container {
+        height: auto;
+        min-height: auto;
+    }
+
+    .column-title-right {
+        padding: clamp(40px, 5vw, 80px) clamp(20px, 3vw, 60px) 0 clamp(20px, 3vw, 60px);
+    }
+
+    .column-content-left {
+        padding: clamp(40px, 5vw, 100px) clamp(20px, 3vw, 60px);
+    }
+
+    .formation-title {
+        font-size: clamp(1.1rem, 2vw, 1.5rem);
+    }
+
+    .formation-subtitle {
+        font-size: clamp(0.8rem, 1.5vw, 0.95rem);
+    }
+
+    .formation-content {
+        font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+    }
+
+    /* Expériences */
+    .grey-container {
+        min-height: auto;
+    }
+
+    .column-title-left {
+        padding: clamp(40px, 5vw, 80px) 0 0 clamp(20px, 3vw, 60px);
+    }
+
+    .column-content-right {
+        padding: clamp(40px, 5vw, 100px) clamp(20px, 3vw, 30px);
+    }
+
+    .experience-title {
+        font-size: clamp(1.1rem, 2vw, 1.5rem);
+    }
+
+    /* Loisirs */
+    .loisirs-container {
+        grid-template-columns: 1fr 1fr;
+        height: auto;
+        min-height: auto;
+    }
+
+    .loisirs-container .column-content-right {
+        padding: clamp(40px, 5vw, 100px) clamp(20px, 3vw, 30px);
+        margin-left: 0;
+        grid-column: 2;
+    }
+
+    .loisirs-container .column-content-ter {
+        display: none;
+    }
 }
 
-.presentation {
-  background: light-dark(var(--sub-color-light) , var(--sub-color));
-  padding: 20px;
-  border-radius: 8px;
-}
+/* ======================================== */
+/* RESPONSIVE - Mobile (jusqu'à 768px) */
+/* ======================================== */
+@media (max-width: 768px) {
+    .cv-container {
+        grid-template-columns: 1fr;
+        gap: 0;
+        margin: 50px 15px;
+        min-height: auto;
+        height: 100dvh;
+    }
 
-.child-grid {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 10px;
-  margin: 15px 0;
-}
+    .cv-left {
+        padding: 50px 20px 20px;
+        font-size: clamp(1.8rem, 6vw, 2.8rem);
+        border-bottom: 2px solid var(--accent-purple);
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
 
-.categorie {
-  grid-column: 1;
-  font-weight: bold;
-  margin: 0;
-}
+    .cv-right {
+        padding: 20px 20px;
+    }
 
-.info {
-  grid-column: 2;
-  margin: 0;
-}
+    .cv-section {
+        margin-bottom: 100px;
+    }
 
-.long-text {
-  margin: 15px 0;
-}
+    .section-title {
+        font-size: 1rem;
+        margin-bottom: 8px;
+    }
 
-/* Styles du carrousel */
-.carousel-container {
-  background: light-dark(var(--sub-color-light) , var(--sub-color));
-  padding: 20px;
-  border-radius: 8px;
-  position: relative;
-}
+    .section-content {
+        font-size: clamp(1rem, 3vw, 2rem);
+        line-height: 1.5;
+    }
 
-.carousel-wrapper {
-  overflow: hidden;
-  position: relative;
-}
+    .cv-grid {
+        gap: 15px;
+    }
 
-.carousel-slides {
-  display: flex;
-  transition: transform 0.3s ease-in-out;
-}
+    .cv-row {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
 
-.carousel-slide {
-  min-width: 100%;
-  box-sizing: border-box;
-}
+    .cv-label {
+        font-size: clamp(1rem, 3vw, 2rem);
+    }
 
-/* Cacher les inputs radio */
-input[type='radio'][name='carousel'] {
-  display: none;
-}
+    .cv-value {
+        font-size: clamp(1rem, 3vw, 2rem);
+        padding-left: 90px;
+    }
 
-/* Navigation du carrousel */
-.carousel-nav {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 15px;
-}
+    .cv-value-block span {
+        font-size: clamp(1rem, 3vw, 2rem);
+        margin-left: 90px;
+    }
+    a.cv-value {
+      text-decoration: underline;
+      padding-left: 0;
+    }
+    /* Formations */
+    .purple-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+        gap: 32px;
+        height: auto;
+        margin: 0;
+        height: 100dvh;
+        justify-content: start;
+    }
 
-.carousel-nav label {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
+    .column-title-right {
+        padding: 20px 20px 20px 20px;
+        grid-column: 1;
+    }
 
-.carousel-nav label:hover {
-  background-color: #999;
-}
+    .title-category {
+        font-size: clamp(2rem, 15vw, 6rem);
+        top: -105px;
+    }
 
-/* Déplacement des slides selon le radio sélectionné */
-#slide1:checked ~ .carousel-wrapper .carousel-slides {
-  transform: translateX(0%);
-}
+    .column-content-left {
+        padding: 0px 20px;
+        grid-column: 1;
+    }
 
-#slide2:checked ~ .carousel-wrapper .carousel-slides {
-  transform: translateX(-100%);
-}
+    .formation-title {
+        font-size: clamp(1rem, 5vw, 5rem);
+        padding-top: 30px;
+    }
 
-#slide3:checked ~ .carousel-wrapper .carousel-slides {
-  transform: translateX(-200%);
-}
+    .formation-subtitle {
+        font-size: clamp(1rem, 3vw, 2rem);
+    }
 
-/* Coloration des indicateurs */
-#slide1:checked ~ .carousel-nav label[for='slide1'],
-#slide2:checked ~ .carousel-nav label[for='slide2'],
-#slide3:checked ~ .carousel-nav label[for='slide3'] {
-  background-color: #333;
-}
+    .formation-content {
+        font-size: clamp(1rem, 3vw, 2rem);
+    }
 
-/* Boutons de navigation flèche */
-.carousel-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: start;
-  margin-bottom: 15px;
-}
+    /* Expériences */
+    .grey-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+        gap: 32px;
+        min-height: auto;
+        margin: 0;
+        height: 100dvh;
+    }
 
-.carousel-header h3 {
-  margin: 0;
-}
+    .column-title-left {
+        padding: 40px 20px 20px 20px;
+        grid-column: 1;
+    }
 
-.carousel-arrows {
-  display: flex;
-  gap: 10px;
-}
+    .title-category-purple {
+        font-size: clamp(2rem, 15vw, 6rem);
+    }
 
-.carousel-arrows label {
-  width: 40px;
-  height: 40px;
-  color: light-dark(var(--text-color-light) , var(--text-color));
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  font-size: 18px;
-  transition: color 0.3s;
-  user-select: none;
-}
+    .column-content-right {
+        padding: 0px 20px;
+        grid-column: 1;
+    }
 
-.carousel-arrows label:hover {
-  color:light-dark(var(--main-color-light) , var(--main-color));
-}
+    .experience-title {
+        font-size: clamp(1rem, 5vw, 5rem);
+        padding-top: 30px;
+    }
 
-.carousel-arrows label:active {
-  color: #000;
-}
+    /* Loisirs */
+    .loisirs-container {
+        grid-template-columns: 1fr;
+        height: auto;
+        margin: 0;
+        height: 100dvh;
+    }
 
-/* Cacher les flèches par défaut */
-.carousel-arrows label {
-  display: none;
-}
+    .loisirs-container .column-content-right {
+        padding: 30px 20px;
+        margin-left: 0;
+        grid-column: 1; 
+    }
 
-/* Afficher les bonnes flèches selon la slide active */
-#slide1:checked ~ .carousel-header .prev-slide3,
-#slide1:checked ~ .carousel-header .next-slide2,
-#slide2:checked ~ .carousel-header .prev-slide1,
-#slide2:checked ~ .carousel-header .next-slide3,
-#slide3:checked ~ .carousel-header .prev-slide2,
-#slide3:checked ~ .carousel-header .next-slide1 {
-  display: flex;
-}
+    .loisirs-container .column-content-ter {
+        padding: 30px 20px;
+        grid-column: 1;
+        display: flex;
+        flex-direction: column;
+    }
 
-/* Changer le titre selon la slide active */
-#carousel-title::before {
-  content: 'Scolarité';
-}
-#slide2:checked ~ .carousel-header #carousel-title::before {
-  content: 'Expériences professionnelles';
-}
-#slide3:checked ~ .carousel-header #carousel-title::before {
-  content: 'Loisirs et actions bénévoles';
+    .column-title-right,
+    .column-title-left,
+    .column-content-left,
+    .column-content-right {
+        grid-column: auto;
+        grid-row: auto;
+    }
 }

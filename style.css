@@ -651,7 +651,9 @@ h4 {
   margin-bottom: 10px;
 }
 /*Fin pagraphe et titres standards*/
+/* ======================================== */
 /* DEBUT DU CV */
+/* ======================================== */
 .cv-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -888,9 +890,7 @@ h4 {
     margin-left: -400px;
 }
 
-/* ======================================== */
 /* RESPONSIVE - Tablette (jusqu'à 1024px) */
-/* ======================================== */
 @media (max-width: 1024px) {
     .cv-container {
         grid-template-columns: 1fr 1fr;
@@ -1019,7 +1019,7 @@ h4 {
     }
 
     .cv-section {
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
 
     .section-title {
@@ -1076,7 +1076,9 @@ h4 {
 
     .title-category {
         font-size: clamp(2rem, 15vw, 6rem);
-        top: -105px;
+        top: 0;
+        transform: translateY(-95%);
+        padding-top: 60px;
     }
 
     .column-content-left {
@@ -1155,8 +1157,6 @@ h4 {
         grid-row: auto;
     }
 }
-
-
 /*FIN DU CV*/
 /*DEBUT PAGE PORTFOLIO*/
 .grid-explications {
