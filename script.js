@@ -59,6 +59,7 @@ class PortfolioNavigation {
   constructor() {
     // Liste de tous les projets dans l'ordre d'affichage
     this.projects = [
+      { url: 'Pagesportfolio/Big-002_AfficheTypo.html', title: 'Affiches Typo' },
       { url: 'Pagesportfolio/Big-001_Vinyle.html', title: 'Vinyles' },
       { url: 'Pagesportfolio/Draw-006_Zoo.html', title: 'Chiens des buissons' },
       { url: 'Pagesportfolio/Draw-005_Pareil.html', title: 'Pareil-Pas pareil' },
@@ -73,6 +74,7 @@ class PortfolioNavigation {
       { url: 'Pagesportfolio/Medium-003_IG.html', title: 'Itinéraires Graphiques' },
       { url: 'Pagesportfolio/Medium-004_Papercut.html', title: 'Itinéraires Graphiques' },
       { url: 'Pagesportfolio/Medium-005_Destriophilie.html', title: 'Itinéraires Graphiques' },
+      { url: 'Pagesportfolio/Medium-006_Enquete.html', title: 'Itinéraires Graphiques' },
       // etc.
     ];
     

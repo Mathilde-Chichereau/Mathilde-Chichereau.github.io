@@ -1,264 +1,199 @@
+/*DEBUT PAGE PORTFOLIO*/
+.grid-explications {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+    margin: 150px 100px;
+}
+
+.grid-explications .left {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.grid-explications h1{
+  color: light-dark(var(--title-color-light), var(--title-color));
+  margin-bottom: 1rem;
+}
+
+.grid-explications .left .explications {
+    grid-column: 1;
+    align-items: center;
+    justify-items: center;
+
+}
+
+.grid-explications img {
+    grid-column: 2;
+    width: 100%;
+    height: 300px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+/* Grid pour les images */
+.grid-images {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 250px;
+    gap: 1rem;
+    margin: 50px 100px;
+}
+
+/* Images horizontales */
+.grid-images img[data-format="horizontal"],
+.grid-images img.horizontal {
+    grid-column: span 2;
+    aspect-ratio: 16 / 9;
+}
+
+/* Images Panoramiques */
+.grid-images img[data-format="panoramic"],
+.grid-images img.panoramic {
+    grid-column: span 4;
+    aspect-ratio: 16 / 9;
+}
+
+/* Images verticales */
+.grid-images img[data-format="vertical"],
+.grid-images img.vertical {
+    grid-row: span 2;
+    aspect-ratio: 9 / 16;
+}
+
+/* Images carrées */
+.grid-images img[data-format="square"],
+.grid-images img.square {
+    grid-column: span 1;
+    grid-row: span 1;
+    aspect-ratio: 1 / 1;
+}
+
+/* Images horizontales grandes */
+.grid-images img[data-format="span"],
+.grid-images img.span {
+    grid-column: span 2;
+    grid-row: span 2;
+    aspect-ratio: 1 / 1;
+}
+
+/* Toutes les images */
+.grid-images img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* Texte */
+.grid-images .text_span {
+   grid-column: span 2;
+   display: flex;
+   flex-direction: column;
+   padding: 10px;
+   margin-bottom: 10px;
+}
+
+.grid-images .project_title {
+    color: light-dark(var(--title-color-light), var(--title-color));
+    font-weight: 600;
+    font-size: 1.1em;
+    padding-bottom: 10px;
+    margin: 0;
+}
+.grid-images p {
+    color: light-dark(var(--text-color-light), var(--text-color));
+    font-size: 0.95em;
+    line-height: 1.4;
+    margin: 0;
+    text-align: justify;
+}
+
+.grid-images .text_long {
+   grid-column: span 3;
+   grid-row: span 2;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   align-self: center;
+   padding: 0 150px;
+   margin-bottom: 10px;
+}
+
+/*Enquete*/
+.enquete_vid {
+    aspect-ratio: 16/9;
+    display: grid ;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: span 2;
+}
+
+.enquete_vid video {
+    width: 100%;
+    height: auto;
+    max-width: 640px;
+    object-fit: cover;
+}
+
+a.credits_video {
+  display: inherit;
+  display: flex;
+  align-self: start;
+  align-items: start;
+  font-size: inherit;
+  padding: 0 0 5px ;
+}
+
+/* Responsive*/
 @media (max-width: 1024px) {
-    .cv-container {
-        grid-template-columns: 1fr 1fr;
-        margin: 50px 15px;
-        min-height: auto;
-    }
-
-    .cv-left {
-        padding: clamp(60px, 8vw, 100px) clamp(30px, 4vw, 40px);
-        font-size: clamp(2rem, 5vw, 3.5rem);
-    }
-
-    .cv-right {
-        padding: clamp(60px, 8vw, 100px) clamp(20px, 3vw, 30px);
-    }
-
-    .cv-row {
-        grid-template-columns: 120px 1fr;
-        gap: 20px;
-    }
-
-    .section-title {
-        font-size: 1.1rem;
-    }
-
-    .section-content {
-        font-size: 0.9rem;
-    }
-
-    .cv-label {
-        font-size: 0.9rem;
-    }
-
-    .cv-value {
-        font-size: 0.9rem;
-    }
-
-    .cv-value-block span {
-        font-size: 0.9rem;
-    }
-
-    /* Formations */
-    .purple-container {
-        height: auto;
-        min-height: auto;
-    }
-
-    .column-title-right {
-        padding: clamp(40px, 5vw, 80px) clamp(20px, 3vw, 60px) 0 clamp(20px, 3vw, 60px);
-    }
-
-    .column-content-left {
-        padding: clamp(40px, 5vw, 100px) clamp(20px, 3vw, 60px);
-    }
-
-    .formation-title {
-        font-size: clamp(1.1rem, 2vw, 1.5rem);
-    }
-
-    .formation-subtitle {
-        font-size: clamp(0.8rem, 1.5vw, 0.95rem);
-    }
-
-    .formation-content {
-        font-size: clamp(0.8rem, 1.5vw, 0.9rem);
-    }
-
-    /* Expériences */
-    .grey-container {
-        min-height: auto;
-    }
-
-    .column-title-left {
-        padding: clamp(40px, 5vw, 80px) 0 0 clamp(20px, 3vw, 60px);
-    }
-
-    .column-content-right {
-        padding: clamp(40px, 5vw, 100px) clamp(20px, 3vw, 30px);
-    }
-
-    .experience-title {
-        font-size: clamp(1.1rem, 2vw, 1.5rem);
-    }
-
-    /* Loisirs */
-    .loisirs-container {
-        grid-template-columns: 1fr 1fr;
-        height: auto;
-        min-height: auto;
-    }
-
-    .loisirs-container .column-content-right {
-        padding: clamp(40px, 5vw, 100px) clamp(20px, 3vw, 30px);
-        margin-left: 0;
-        grid-column: 2;
-    }
-
-    .loisirs-container .column-content-ter {
-        display: none;
+    .grid-images {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-auto-rows: 200px;
+        margin: 30px 50px;
     }
 }
 
-/* ======================================== */
-/* RESPONSIVE - Mobile (jusqu'à 768px) */
-/* ======================================== */
 @media (max-width: 768px) {
-    .cv-container {
+    .grid-explications {
         grid-template-columns: 1fr;
-        gap: 0;
-        margin: 50px 15px;
-        min-height: auto;
-        height: 100dvh;
+        margin: 20px;
     }
 
-    .cv-left {
-        padding: 50px 20px 20px;
-        font-size: clamp(1.8rem, 6vw, 2.8rem);
-        border-bottom: 2px solid var(--accent-purple);
-        align-items: center;
-        justify-content: center;
-        text-align: center;
+    .grid-explications .left {
+        grid-column: 1;
+        grid-row: 1;
     }
 
-    .cv-right {
-        padding: 20px 20px;
-    }
-
-    .cv-section {
-        margin-bottom: 100px;
-    }
-
-    .section-title {
-        font-size: 1rem;
-        margin-bottom: 8px;
-    }
-
-    .section-content {
-        font-size: clamp(1rem, 3vw, 2rem);
-        line-height: 1.5;
-    }
-
-    .cv-grid {
-        gap: 15px;
-    }
-
-    .cv-row {
-        grid-template-columns: 1fr;
-        gap: 5px;
-    }
-
-    .cv-label {
-        font-size: clamp(1rem, 3vw, 2rem);
-    }
-
-    .cv-value {
-        font-size: clamp(1rem, 3vw, 2rem);
-        padding-left: 90px;
-    }
-
-    .cv-value-block span {
-        font-size: clamp(1rem, 3vw, 2rem);
-        margin-left: 90px;
-    }
-    a.cv-value {
-      text-decoration: underline;
-      padding-left: 0;
-    }
-    /* Formations */
-    .purple-container {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto 1fr;
-        gap: 32px;
+    .grid-explications img {
+        grid-column: 1;
+        grid-row: 2;
+        width: 100%;
         height: auto;
-        margin: 0;
-        height: 100dvh;
-        justify-content: start;
+        max-height: 300px;
     }
-
-    .column-title-right {
-        padding: 20px 20px 20px 20px;
-        grid-column: 1;
+    .grid-images {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 150px;
+        margin: 20px;
     }
-
-    .title-category {
-        font-size: clamp(2rem, 15vw, 6rem);
-        top: -105px;
-    }
-
-    .column-content-left {
-        padding: 0px 20px;
-        grid-column: 1;
-    }
-
-    .formation-title {
-        font-size: clamp(1rem, 5vw, 5rem);
-        padding-top: 30px;
-    }
-
-    .formation-subtitle {
-        font-size: clamp(1rem, 3vw, 2rem);
-    }
-
-    .formation-content {
-        font-size: clamp(1rem, 3vw, 2rem);
-    }
-
-    /* Expériences */
-    .grey-container {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto 1fr;
-        gap: 32px;
-        min-height: auto;
-        margin: 0;
-        height: 100dvh;
-    }
-
-    .column-title-left {
-        padding: 40px 20px 20px 20px;
-        grid-column: 1;
-    }
-
-    .title-category-purple {
-        font-size: clamp(2rem, 15vw, 6rem);
-    }
-
-    .column-content-right {
-        padding: 0px 20px;
-        grid-column: 1;
-    }
-
-    .experience-title {
-        font-size: clamp(1rem, 5vw, 5rem);
-        padding-top: 30px;
-    }
-
-    /* Loisirs */
-    .loisirs-container {
-        grid-template-columns: 1fr;
-        height: auto;
-        margin: 0;
-        height: 100dvh;
-    }
-
-    .loisirs-container .column-content-right {
-        padding: 30px 20px;
-        margin-left: 0;
-        grid-column: 1; 
-    }
-
-    .loisirs-container .column-content-ter {
-        padding: 30px 20px;
-        grid-column: 1;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .column-title-right,
-    .column-title-left,
-    .column-content-left,
-    .column-content-right {
-        grid-column: auto;
-        grid-row: auto;
+    
+    .grid-images img.horizontal,
+    .grid-images img.panoramic {
+        grid-column: span 2;
     }
 }
+
+@media (max-width: 480px) {
+    .grid-images {
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+    }
+    
+    .grid-images img {
+        grid-column: span 1 !important;
+        grid-row: span 1 !important;
+    }
+}
+
+/*FIN PAGE PORTFOLIO*/
